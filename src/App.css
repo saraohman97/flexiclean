@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    width: 90%;
+    margin: 0rem auto;
+    padding-block: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2rem;
+
+    width: 90%;
+    margin: 0 auto;
+}
+.nav-logo {
+    width: 270px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0;
+}
+.nav-link {
+    color: gray;
+    text-decoration: none;
+    padding: 20px;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+.gap {
+    gap: 1rem;
+    color: gray;
+}
+
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    border: 1px solid lightgray;
+    padding: 12px 16px;
+    z-index: 1;
+    top: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
+
+
+
+  /* HOMEPAGE */
+.home-page {
+    overflow: hidden;
+    background-color: white;
+}
+.home-header {
+    height: 85.5vh;
+}
+.home-text {
+    margin-top: 25vh;
+    margin-left: 10vh;
+    width: 100vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.home-text h1 {
+    font-size: 50px;
+}
+.home-text p {
+    line-height: 30px;
 }
