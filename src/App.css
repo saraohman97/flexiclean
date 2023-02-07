@@ -80,7 +80,7 @@ html, body {
     margin-top: 25vh;
     margin-left: 10vh;
     width: 100vh;
-    text-align: center;
+    /* text-align: center; */
 
     display: flex;
     flex-direction: column;
