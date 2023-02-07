@@ -1,0 +1,18 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "name": "Harley Quinn",
+      "mail": "scullbasher@mail.com",
+      "subject": "Question about product",
+      "message": "Can your product be used for evil atrocities?"
+    },
+    {
+      "fullName": "Joker",
+      "email": "batmankiller@mail.com",
+      "subject": "Custom work needed",
+      "message": "Evil lair needs filter for evil atrocity. ",
+      "id": 2
+    }
+  ]
+}

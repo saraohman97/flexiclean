@@ -1,29 +1,48 @@
-import React from 'react'
+import { useState } from 'react'
 
 const ContactsPage = () => {
+  const [fullName, setFullName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmitForm = e => {
+    e.preventDefault()
+
+    const addMessage = {fullName, email, subject, message}
+
+    fetch('http://localhost:4000/messages', {
+      method: "POST",
+      headers: {"Content-Type": "application/json"}, 
+      body: JSON.stringify(addMessage)
+    }).then(() => {
+      console.log(addMessage)
+    })
+  }
+
   return (
     <div className='contacts-page'>
       <div className="container">
-        <form>
+        <form onSubmit={handleSubmitForm}>
           <h2>Kontakta Oss</h2>
           <div className="input-group">
-            <label htmlFor="name">Ditt namn</label>
-            <input type="text" />
+            <label htmlFor="text">Ditt namn</label>
+            <input type="text" value={fullName} onChange={e => setFullName(e.target.value)} />
           </div>
 
           <div className="input-group">
             <label htmlFor="email">Din e-postadress</label>
-            <input type="email" />
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
           </div>
 
           <div className="input-group">
-            <label htmlFor="subject">Ämne</label>
-            <input type="text" />
+            <label htmlFor="text">Ämne</label>
+            <input type="text" value={subject} onChange={e => setSubject(e.target.value)} />
           </div>
 
           <div className="input-group">
-            <label htmlFor="email">Din e-postadress</label>
-            <textarea name="message" cols="30" rows="10"></textarea>
+            <label htmlFor="message">Ditt meddelande</label>
+            <textarea name="message" cols="30" rows="10" value={message} onChange={e => setMessage(e.target.value)}></textarea>
           </div>
 
           <button>Skicka meddelande</button>
@@ -60,7 +79,7 @@ const ContactsPage = () => {
             </div>
           </div>
 
-          <iframe width="600" height="500" src="https://maps.google.com/maps?q=Brandthovdagatan%2016%20721%2035%20V%C3%A4ster%C3%A5s&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" marginheight="0" marginwidth="0" title='This is a map to find FlexiClean'></iframe>
+          <iframe width="600" height="500" src="https://maps.google.com/maps?q=Brandthovdagatan%2016%20721%2035%20V%C3%A4ster%C3%A5s&t=&z=13&ie=UTF8&iwloc=&output=embed" title='This is a map to find FlexiClean'></iframe>
         </div>
       </div>
     </div>
@@ -68,3 +87,6 @@ const ContactsPage = () => {
 }
 
 export default ContactsPage
+
+
+// frameborder="0" marginHeight="0" marginWidth="0"
