@@ -33,16 +33,16 @@ const ContactsPage = () => {
         <div className='contacts-info'>
           <h2>Besök Oss</h2>
 
-          <div className='contacts-info-text'>
-            <div>
-              <label>Öppettider</label>
-              <p>
-                må-fr: 07.00-16.00 <br />
-                lö: stängt <br />
-                sö: stängt
-              </p>
-            </div>
+          <div>
+            <label>Öppettider</label>
+            <p>
+              måndag - fredag: 07.00 - 16.00 ·
+              lördag: stängt ·
+              söndag: stängt
+            </p>
+          </div>
 
+          <div className='contacts-info-text'>
             <div>
               <label>Adress</label>
               <p>
@@ -55,14 +55,12 @@ const ContactsPage = () => {
               <label>GPS</label>
               <p>
                 WGS84: N 59° 36.9505', E 16° 36.5669' <br />
-Decimal: 59.6158, 16.6094
-</p>
+                Decimal: 59.6158, 16.6094
+              </p>
             </div>
           </div>
 
-          <div className='test'></div>
-
-
+          <iframe width="600" height="500" src="https://maps.google.com/maps?q=Brandthovdagatan%2016%20721%2035%20V%C3%A4ster%C3%A5s&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" marginheight="0" marginwidth="0" title='This is a map to find FlexiClean'></iframe>
         </div>
       </div>
     </div>
