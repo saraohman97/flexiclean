@@ -1,6 +1,8 @@
 const DagvattenReningShowcase = () => {
     return (
         <div className="showcase-products">
+            <h2>Våra filter</h2>
+            
             <div className='d-flex-a'>
                 <div className="gap">
                     <div>

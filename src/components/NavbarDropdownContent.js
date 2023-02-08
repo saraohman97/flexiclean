@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NavbarDropdownContent = () => {
   return (
     <div className='dropdown-content'>
-      -Våra filter <br />
-      -Installations instruktioner <br />
-      {/* -Vetenskapen */}
+      <div className="dropdown-text">
+        <Link to='/products'>Våra filter</Link>
+        <Link to='/instruction'>Installations instruktioner</Link>
+        <Link to='/products'>Leverans kartan</Link>
+
+        {/* -Vetenskapen */}
       </div>
+    </div>
   )
 }
 

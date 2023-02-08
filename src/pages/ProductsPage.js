@@ -7,9 +7,6 @@ const ProductsPage = () => {
     <div className='products-page'>
       <div className="container">
 
-        <h2>Våra filter</h2>
-
-
         <DagvattenReningShowcase />
 
         <GranulatFiltreringShowcase />
