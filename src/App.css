@@ -15,6 +15,18 @@ html, body {
     padding-block: 2rem;
 }
 
+.btn {
+    width: 9rem;
+    padding: .6em;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: .4em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -42,7 +54,13 @@ html, body {
 }
 .gap {
     gap: 1rem;
+}
+.nav-book-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     color: gray;
+    cursor: pointer;
 }
 
 
@@ -108,7 +126,7 @@ html, body {
 .contacts-page .container form {
     max-width: 400px;
 }
-.contacts-info-text label {
+.contacts-info label {
     font-weight: 600;
 }
 .contacts-info-text {
@@ -116,22 +134,17 @@ html, body {
     flex-wrap: wrap;
     gap: 2rem;
 }
-.contacts-page .input-group {
+.input-group {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
-.contacts-page .input-group input, .contacts-page .input-group textarea {
+.input-group input, .input-group textarea {
     padding: .3em 1em;
     border: 1px solid lightgray;
 }
 .contacts-page form button {
-    width: 9rem;
-    padding: .6em;
     background-color: rgb(34, 122, 200);
-    color: white;
-    border: 2px solid transparent;
-    border-radius: .5em;
 }
 
 
@@ -159,4 +172,54 @@ html, body {
 }
 .documentation-group img {
     flex: 1;
+}
+
+
+
+/* BOOK MODAL */
+.book-modal form,
+.book-modal {
+    position: absolute;
+    z-index: 5;
+    width: 70vh;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: white;
+    box-shadow: 1px 1px 10px lightgray;
+    padding: 3rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.x-btn {
+    border: none;
+    background-color: transparent;
+    font-size: x-large;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.book-text {
+    line-height: 30px;
+}
+
+.book-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.book-bottom .btn {
+background-color: black;
 }

@@ -45,7 +45,7 @@ const ContactsPage = () => {
             <textarea name="message" cols="30" rows="10" value={message} onChange={e => setMessage(e.target.value)}></textarea>
           </div>
 
-          <button>Skicka meddelande</button>
+          <button className='btn'>Skicka meddelande</button>
         </form>
 
 
