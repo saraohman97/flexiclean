@@ -8,8 +8,6 @@ const NavbarDropdownContent = () => {
         <Link to='/products'>Våra filter</Link>
         <Link to='/instruction'>Installations instruktioner</Link>
         <Link to='/products'>Leverans kartan</Link>
-
-        {/* -Vetenskapen */}
       </div>
     </div>
   )
