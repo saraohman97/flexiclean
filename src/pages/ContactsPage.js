@@ -80,6 +80,7 @@ const ContactsPage = () => {
           </div>
 
           <iframe width="600" height="500" src="https://maps.google.com/maps?q=Brandthovdagatan%2016%20721%2035%20V%C3%A4ster%C3%A5s&t=&z=13&ie=UTF8&iwloc=&output=embed" title='This is a map to find FlexiClean'></iframe>
+          {/* <iframe width="600" height="500" src="" title='This is a map to find FlexiClean'></iframe> */}
         </div>
       </div>
     </div>

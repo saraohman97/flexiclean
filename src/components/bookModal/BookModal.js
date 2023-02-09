@@ -35,7 +35,7 @@ const BookModal = ({ handleBookIconClick }) => {
                 <form onSubmit={handleSubmitForm}>
 
                     <div className='book-title'>
-                        <h2>Beställa filter</h2>
+                        <h2>Beställa filterpåse</h2>
                         <button className='x-btn' onClick={handleBookIconClick}><i className="fa-solid fa-x"></i></button>
                     </div>
 
