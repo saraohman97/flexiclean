@@ -50,6 +50,10 @@ const ContactsPage = () => {
 
 
         <div className='contacts-info'>
+          <div className="call-us">
+            <h3>Ring oss för process- eller dag-vattenråd:  08-120 17 530</h3>
+          </div>
+
           <h2>Besök Oss</h2>
 
           <div>

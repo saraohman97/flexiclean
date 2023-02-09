@@ -11,7 +11,7 @@ const Collaborators = () => {
                     <div className='aros-img'>
                         <img src="https://dst15js82dk7j.cloudfront.net/252829/71094620-PeXgW.jpg" alt="" />
                     </div>
-                    <div className="overlay"></div>
+                    <div className="collaborator-overlay"></div>
                     <div className='collaborator-text'>
                         <h3>Delägare i AB Aros Rör & Svets</h3>
                         <p>
@@ -22,7 +22,7 @@ const Collaborators = () => {
 
                 <div className='collaborator'>
                     <img src="https://dst15js82dk7j.cloudfront.net/252829/71094842-cyKZY.jpg" alt="" />
-                    <div className="overlay"></div>
+                    <div className="collaborator-overlay"></div>
                     <div className='collaborator-text'>
                         <h3>Rent Dagvatten AB</h3>
                         <p>
@@ -35,7 +35,7 @@ const Collaborators = () => {
 
                 <div className='collaborator'>
                     <img src="https://dst15js82dk7j.cloudfront.net/252829/72745545-7sJQ6.png" alt="" />
-                    <div className="overlay"></div>
+                    <div className="collaborator-overlay"></div>
                     <div className='collaborator-text'>
                         <h3>Remedy By Sweden AB</h3>
                         <p>
@@ -46,7 +46,7 @@ const Collaborators = () => {
 
                 <div className='collaborator'>
                     <img src="https://dst15js82dk7j.cloudfront.net/252829/71094915-vnRie.jpg" alt="" />
-                    <div className="overlay"></div>
+                    <div className="collaborator-overlay"></div>
                     <div className='collaborator-text'>
                         <h3>Minrent - Jernkontoret</h3>
                         <p>Vattenfiltrering med mineralbaserade restprodukter som reningsteknik för hållbara samhällslösningar.</p>
@@ -56,7 +56,7 @@ const Collaborators = () => {
 
                 <div className='collaborator'>
                     <img src="https://dst15js82dk7j.cloudfront.net/252829/71095016-S1gDt.png" alt="" />
-                    <div className="overlay"></div>
+                    <div className="collaborator-overlay"></div>
                     <div className='collaborator-text'>
                         <h3>Stockholm Cleantech</h3>
                         <a href="www.smtc.se">www.smtc.se/</a>
@@ -65,7 +65,7 @@ const Collaborators = () => {
 
                 <div className='collaborator'>
                     <img src="https://dst15js82dk7j.cloudfront.net/252829/71095154-aTjD6.png" alt="" />
-                    <div className="overlay"></div>
+                    <div className="collaborator-overlay"></div>
                     <div className='collaborator-text'>
                         <h3>Baltic Flows.</h3>
                         <p>Ett samarbete runt Österjön.</p>

@@ -4,7 +4,10 @@ const DocumentationPage = () => {
   return (
     <div className='documentation-page'>
       <div className="container">
-        <h2>Dokumentation</h2>
+        <div className='tc'>
+          <h2>Dokumentation</h2> <br />
+          <p>Här publicerar vi fortlöpande tester utförda på FlexiClean. Redan för 14 år sedan blev vi tipsade om att använda bark som filtermaterial. De senare åren av forskning visar att vi valt rätt. Ladda gärna ned rapporterna nedan.</p>
+        </div>
 
         <div className='documentation-group'>
           <div className="documentation-group-text">

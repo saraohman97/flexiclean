@@ -23,11 +23,6 @@ const BookModal = ({ handleBookIconClick }) => {
         })
     }
 
-
-    // const toggleContent = () => {
-
-    // }
-
     return (
         <div className='book-modal'>
             {!showInfo && (
