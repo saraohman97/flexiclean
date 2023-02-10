@@ -13,7 +13,6 @@ const Navbar = () => {
             : setOpenBookModal(true)
     }
 
-
     return (
         <>
             {openBookModal && <div className='book-overlay' onClick={handleBookIconClick}></div>}

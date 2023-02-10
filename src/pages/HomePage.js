@@ -15,12 +15,6 @@ const HomePage = () => {
         </div>
       </div>
 
-      <Collaborators />
-
-
-
-
-
       <div className="competition">
         <div className="container">
           <h2>Västmanlands miljö- och klimatpris 2019</h2>
@@ -48,13 +42,12 @@ const HomePage = () => {
                 2019. Vinnare. Västmanlands Klimat- och Miljöpris.
               </p>
 
-              <br />
+              {/* <br /> */}
 
-              <div className="competition-filter">
+              {/* <div className="competition-filter">
                 <img src="https://dst15js82dk7j.cloudfront.net/252829/71166206-7DuNY.jpg" alt="" />
-              </div>
+              </div> */}
             </div>
-
 
             <div className="competition-img">
               <img src="https://h24-original.s3.amazonaws.com/252829/28712055-9XX6s.jpg" alt="" />
@@ -63,6 +56,7 @@ const HomePage = () => {
         </div>
       </div>
 
+      <Collaborators />
 
     </div>
   )

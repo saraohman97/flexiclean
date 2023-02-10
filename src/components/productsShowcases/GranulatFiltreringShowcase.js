@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GranulatFiltreringShowcase = () => {
+const GranulatFiltreringShowcase = ({toggleAccordion, openAccordion}) => {
     return (
         <div className='showcase-granulat'>
             <div className='d-flex-a'>
@@ -13,6 +13,9 @@ const GranulatFiltreringShowcase = () => {
                         <h4>Montage</h4>
                         <p>Att tänka på vid montaget är att filterkassetten kräver minst 8000/1000 mm djup i brunnen och med slät innersida på brunnen. Självaste "hålet" i beteckning måste vara 330 mm i diameter. Dessutom kan teleskopbeteckning försvåra montaget. </p>
                     </div>
+
+                    <button className="products-accordion btn" onClick={toggleAccordion}>Hitta filterstorlek: </button>
+                    { openAccordion && (
 
                     <table>
                         <thead>
@@ -51,6 +54,7 @@ const GranulatFiltreringShowcase = () => {
                             </tr>
                         </tbody>
                     </table>
+                    )}
                 </div>
                 <img src="https://h24-original.s3.amazonaws.com/252829/29670684-zGYJd.jpg" alt="" />
             </div>

@@ -1,8 +1,8 @@
-const DagvattenReningShowcase = () => {
+const DagvattenReningShowcase = ({toggleAccordion, openAccordion}) => {
     return (
         <div className="showcase-products">
             <h2>Våra filter</h2>
-            
+
             <div className='d-flex-a'>
                 <div className="gap">
                     <div>
@@ -14,8 +14,10 @@ const DagvattenReningShowcase = () => {
                         <p>Att tänka på vid montaget är att filterkassetten kräver minst 8000/1000 mm djup i brunnen och med slät innersida på brunnen. Självaste "hålet" i beteckning måste vara 300 mm i diameter. Dessutom kan teleskopbeteckning försvåra montaget. </p>
                     </div>
 
+                    <button className="products-accordion btn" onClick={toggleAccordion}>Hitta filterstorlek: </button>
+                    { openAccordion && (
 
-                    <table>
+                    <table className="products-panel">
                         <thead>
                             <tr>
                                 <th>Artikelnummer</th>
@@ -99,6 +101,7 @@ const DagvattenReningShowcase = () => {
                             </tr>
                         </tbody>
                     </table>
+                    )}
                 </div>
                 <img src="https://h24-original.s3.amazonaws.com/252829/29670650-RH8xG.jpg" alt="" />
             </div>
