@@ -77,7 +77,7 @@ const BookModal = ({ handleBookIconClick }) => {
 
                     <div className='book-bottom'>
                         <button className='btn' onClick={() => setShowInfo(false)}>Tillbaka</button>
-                        <Link to='/products'>
+                        <Link to='/instruction'>
                             <button className='btn'>Se installations instruktioner</button>
                         </Link>
                     </div>
