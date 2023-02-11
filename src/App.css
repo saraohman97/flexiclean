@@ -12,6 +12,7 @@ html, body {
     width: 70%;
     margin: 0 auto;
     padding-block: 4rem;
+    /* line-height: 30px; */
 }
 .btn {
     width: 9rem;
@@ -369,6 +370,8 @@ background-color: black;
 /* PRODUCTS PAGE */
 .products-page .container {
     line-height: 30px;
+    font-family: serif;
+    font-size: large;
 
     display: flex;
     flex-direction: column;
@@ -378,35 +381,52 @@ background-color: black;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* --------------------------------------------- idea - do in container though */
-    /* margin-top: 10rem; */
 }
 .products-page img {
     width: 200px;
     height: auto;
 }
-.products-page img .click {
+/* .products-page img .click {
     width: 300px;
     height: auto;
-}
+} */
 table {
-    width: 650px;
+    /* width: 650px; */
+    width: 100%;
+
 }
 th, td {
     padding: .5rem;
-    outline: 1px solid lightgray;
-    text-align: center;
+    outline: .1px solid lightgray;
+}
+th {
+    background-color: #f2f2f2;
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-/* .showcase-products .btn {
-    width: 650px;
-    background-color: lightgray;
-    color: black;
-    border-radius: 0;
-} */
 
+.products-accordion {
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid lightgray;
+    /* transition: .4s; */
+
+    line-height: 30px;
+    font-family: serif;
+    font-size: large;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .img-hover:hover {
+
+} */
 
 
 

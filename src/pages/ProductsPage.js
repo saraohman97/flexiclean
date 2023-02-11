@@ -47,7 +47,7 @@ const ProductsPage = () => {
         </div>
 
         <div className="showcase-brunn">
-          <div className='d-flex'>
+          <div className='d-flex-a'>
             <div className='gap'>
               <h3>FlexiClean filterbrunnar för dagvattenrening</h3>
               <p>
@@ -57,36 +57,41 @@ const ProductsPage = () => {
                 Kontakta oss för närmare information.
               </p>
 
-              <button className="products-accordion btn" onClick={() => toggleAccordion}>Hitta filterstorlek: </button>
-              {openAccordion && (
+              <div>
+                <div className="products-accordion" onClick={toggleAccordion}>
+                  <p>Filter storlekar</p>
+                  <p>{openAccordion ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}</p>
+                </div>
+                {openAccordion && (
 
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Artikelnummer</th>
-                      <th>Antal filterkassetter</th>
-                      <th>Annat</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>79 122 Filterbrunn Dagvatten DN600</td>
-                      <td>2 st</td>
-                      <td>FlexiClean 408, 19 m3/h</td>
-                    </tr>
-                    <tr>
-                      <td>79 123 Filterbrunn Dagvatten DN1000</td>
-                      <td>3 st</td>
-                      <td>FlexiClean 408, 29 m3/h</td>
-                    </tr>
-                    <tr>
-                      <td>79 124 Filterbrunn Dagvatten DN1200</td>
-                      <td>4 st</td>
-                      <td>FlexiClean 408, 38 m3/h</td>
-                    </tr>
-                  </tbody>
-                </table>
-              )}
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Artikelnummer</th>
+                        <th>Antal filterkassetter</th>
+                        <th>Annat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>79 122 Filterbrunn Dagvatten DN600</td>
+                        <td>2 st</td>
+                        <td>FlexiClean 408, 19 m3/h</td>
+                      </tr>
+                      <tr>
+                        <td>79 123 Filterbrunn Dagvatten DN1000</td>
+                        <td>3 st</td>
+                        <td>FlexiClean 408, 29 m3/h</td>
+                      </tr>
+                      <tr>
+                        <td>79 124 Filterbrunn Dagvatten DN1200</td>
+                        <td>4 st</td>
+                        <td>FlexiClean 408, 38 m3/h</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                )}
+              </div>
             </div>
 
             <img src="https://h24-original.s3.amazonaws.com/252829/29670696-DJXfM.jpg" alt="" />

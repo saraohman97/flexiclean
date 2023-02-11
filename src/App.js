@@ -6,6 +6,7 @@ import ProductsPage from './pages/ProductsPage'
 import DocumentationPage from './pages/DocumentationPage'
 import ContactsPage from './pages/ContactsPage'
 import InstructionPage from './pages/InstructionPage';
+import GranulatPage from './pages/GranulatPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/documentation' element={<DocumentationPage />} />
         <Route path='/contacts' element={<ContactsPage />} />
         <Route path='/instruction' element={<InstructionPage />} />
+        <Route path='/products/granulat' element={<GranulatPage />} />
       </Routes>
     </div>
   );
