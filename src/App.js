@@ -7,6 +7,7 @@ import DocumentationPage from './pages/DocumentationPage'
 import ContactsPage from './pages/ContactsPage'
 import InstructionPage from './pages/InstructionPage';
 import GranulatPage from './pages/GranulatPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path='/instruction' element={<InstructionPage />} />
         <Route path='/products/granulat' element={<GranulatPage />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
