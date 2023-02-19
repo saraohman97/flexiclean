@@ -34,7 +34,7 @@ const BookModal = ({ handleBookIconClick }) => {
                         <button className='x-btn' onClick={handleBookIconClick}><i className="fa-solid fa-x"></i></button>
                     </div>
 
-                    <div className="form-inputs">
+                    <div className="book-form">
                         <div className="input-group">
                             <label htmlFor="number">Bokningsnummer</label>
                             <input type="number" value={bookingNumber} onChange={e => setBookingNumber(e.target.value)} />

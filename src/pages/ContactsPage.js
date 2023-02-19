@@ -1,58 +1,93 @@
 import { useState } from 'react'
+import ContactsFormInput from '../components/forms/FormInput'
 
 const ContactsPage = () => {
-  const [fullName, setFullName] = useState('')
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
+  const [values, setValues] = useState({
+    fullName: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
 
-  const handleSubmitForm = e => {
+  const inputs = [
+    {
+      id: 1,
+      name: 'fullName',
+      type: 'text',
+      label: 'För- och efternamn',
+      errorMessage: 'Du måste ange ett för- och efternamn.',
+      // pattern: "^[A-Za-z0-9]$",
+      pattern: "(.|)*(.|)*",
+      required: true
+    },
+    {
+      id: 2,
+      name: 'email',
+      type: 'email',
+      label: 'Email',
+      errorMessage: 'Du måste ange en email adress.',
+      required: true
+    },
+    {
+      id: 3,
+      name: 'subject',
+      type: 'text',
+      label: 'Ämne',
+      errorMessage: 'Du måste ange ett ämne.',
+      // pattern: "^[A-Za-z0-9]$",
+      required: true
+    },
+    {
+      id: 4,
+      name: 'message',
+      type: 'text',
+      label: 'Meddelande',
+      errorMessage: 'Du måste ange ett meddelande.',
+      // pattern: "^[A-Za-z0-9]$",
+      required: true
+    },
+  ]
+
+  const handleSubmit = e => {
     e.preventDefault()
 
-    const addMessage = {fullName, email, subject, message}
+    const addMessage = { values }
 
     fetch('http://localhost:4000/messages', {
       method: "POST",
-      headers: {"Content-Type": "application/json"}, 
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(addMessage)
     }).then(() => {
       console.log(addMessage)
     })
   }
 
+  const onChange = e => {
+    setValues({ ...values, [e.target.name]: e.target.value })
+  }
+
   return (
     <div className='contacts-page'>
+      <div className="call-us">
+        <h3>Ring oss för process- eller dag-vattenråd:  08-120 17 530</h3>
+      </div>
       <div className="container">
-        <form onSubmit={handleSubmitForm}>
+
+        <form onSubmit={handleSubmit}>
           <h2>Kontakta Oss</h2>
-          <div className="input-group">
-            <label htmlFor="text">Ditt namn</label>
-            <input type="text" value={fullName} onChange={e => setFullName(e.target.value)} />
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="email">Din e-postadress</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="text">Ämne</label>
-            <input type="text" value={subject} onChange={e => setSubject(e.target.value)} />
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="message">Ditt meddelande</label>
-            <textarea name="message" cols="30" rows="10" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-          </div>
-
-          <button className='btn'>Skicka meddelande</button>
+          {inputs.map(input => (
+            <ContactsFormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
+          ))}
+          <button className='btn'>Skicka</button>
         </form>
 
 
+
+
+
+
+
         <div className='contacts-info'>
-          <div className="call-us">
-            <h3>Ring oss för process- eller dag-vattenråd:  08-120 17 530</h3>
-          </div>
 
           <h2>Besök Oss</h2>
 
@@ -84,8 +119,39 @@ const ContactsPage = () => {
           </div>
 
           <iframe width="600" height="500" src="https://maps.google.com/maps?q=Brandthovdagatan%2016%20721%2035%20V%C3%A4ster%C3%A5s&t=&z=13&ie=UTF8&iwloc=&output=embed" title='This is a map to find FlexiClean'></iframe>
-          {/* <iframe width="600" height="500" src="" title='This is a map to find FlexiClean'></iframe> */}
         </div>
+
+
+
+
+        {/* 
+        <form onSubmit={handleSubmitForm}>
+          <h2>Kontakta Oss</h2>
+          <div className="input-group">
+            <label htmlFor="text">Ditt namn</label>
+            <input type="text" value={fullName} onChange={e => setFullName(e.target.value)} />
+            {error && <p>{error.fullName}</p>}
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="email">Din e-postadress</label>
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+            {error && <p>{error.email}</p>}
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="text">Ämne</label>
+            <input type="text" value={subject} onChange={e => setSubject(e.target.value)} />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="message">Ditt meddelande</label>
+            <textarea name="message" cols="30" rows="10" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+          </div>
+
+          <button className='btn'>Skicka meddelande</button>
+        </form> */}
+
       </div>
     </div>
   )

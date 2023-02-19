@@ -260,16 +260,14 @@ html, body {
     gap: 1rem;
     flex: 1;
 }
-.contacts-page .container form {
-    max-width: 400px;
-}
-
 .call-us {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: lightblue;
-    padding-block: 2rem ;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 .contacts-info label {
     font-weight: 600;
@@ -279,20 +277,9 @@ html, body {
     flex-wrap: wrap;
     gap: 2rem;
 }
-.input-group {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-.input-group input, .input-group textarea {
-    padding: .3em 1em;
-    border: 1px solid lightgray;
-}
 .contacts-page form button {
-    /* background-color: rgb(34, 122, 200); */
     background-color: black;
 }
-
 
 
 /* DOKUMENTATION */
@@ -320,6 +307,11 @@ html, body {
 .documentation-group img {
     flex: 1;
 }
+
+
+
+
+
 
 
 
@@ -358,13 +350,14 @@ html, body {
     border: none;
     background-color: transparent;
     font-size: x-large;
+    cursor: pointer;
 }
-
-.form-inputs {
+.book-form {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
+
 .book-text {
     line-height: 30px;
 }
@@ -400,12 +393,7 @@ background-color: black;
     width: 200px;
     height: auto;
 }
-/* .products-page img .click {
-    width: 300px;
-    height: auto;
-} */
 table {
-    /* width: 650px; */
     width: 100%;
 
 }
@@ -428,7 +416,6 @@ tr:nth-child(even) {
     width: 100%;
     text-align: left;
     border: 1px solid lightgray;
-    /* transition: .4s; */
 
     line-height: 30px;
     font-family: serif;
@@ -438,9 +425,6 @@ tr:nth-child(even) {
     justify-content: space-between;
     align-items: center;
 }
-/* .img-hover:hover {
-
-} */
 
 
 
