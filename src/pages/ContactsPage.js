@@ -16,7 +16,6 @@ const ContactsPage = () => {
       type: 'text',
       label: 'För- och efternamn',
       errorMessage: 'Du måste ange ett för- och efternamn.',
-      // pattern: "^[A-Za-z0-9]$",
       pattern: "(.|)*(.|)*",
       required: true
     },
@@ -34,7 +33,7 @@ const ContactsPage = () => {
       type: 'text',
       label: 'Ämne',
       errorMessage: 'Du måste ange ett ämne.',
-      // pattern: "^[A-Za-z0-9]$",
+      pattern: "(.|)*(.|)*",
       required: true
     },
     {
@@ -43,7 +42,7 @@ const ContactsPage = () => {
       type: 'text',
       label: 'Meddelande',
       errorMessage: 'Du måste ange ett meddelande.',
-      // pattern: "^[A-Za-z0-9]$",
+      pattern: "(.|)*(.|)*",
       required: true
     },
   ]
@@ -121,43 +120,9 @@ const ContactsPage = () => {
           <iframe width="600" height="500" src="https://maps.google.com/maps?q=Brandthovdagatan%2016%20721%2035%20V%C3%A4ster%C3%A5s&t=&z=13&ie=UTF8&iwloc=&output=embed" title='This is a map to find FlexiClean'></iframe>
         </div>
 
-
-
-
-        {/* 
-        <form onSubmit={handleSubmitForm}>
-          <h2>Kontakta Oss</h2>
-          <div className="input-group">
-            <label htmlFor="text">Ditt namn</label>
-            <input type="text" value={fullName} onChange={e => setFullName(e.target.value)} />
-            {error && <p>{error.fullName}</p>}
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="email">Din e-postadress</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-            {error && <p>{error.email}</p>}
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="text">Ämne</label>
-            <input type="text" value={subject} onChange={e => setSubject(e.target.value)} />
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="message">Ditt meddelande</label>
-            <textarea name="message" cols="30" rows="10" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-          </div>
-
-          <button className='btn'>Skicka meddelande</button>
-        </form> */}
-
       </div>
     </div>
   )
 }
 
 export default ContactsPage
-
-
-// frameborder="0" marginHeight="0" marginWidth="0"
