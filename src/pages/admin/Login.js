@@ -19,7 +19,7 @@ const Login = () => {
             .then((userCredential) => {
                 const data = userCredential.user;
                 dispatch({ type: "LOGIN", payload: data })
-                navigate('/create')
+                navigate('/skapa')
             })
             .catch((error) => {
                 setError(true)
@@ -27,15 +27,15 @@ const Login = () => {
     }
 
     return (
-        <div className="admin-content">
-            <Link to='/' className="btn-close">X</Link>
+        <div className="absolute inset-0 flex justify-center items-center w-full h-screen bg-black z-50">
 
-            <form onSubmit={handleSubmit} className='admin-form'>
-                <h3 className="text-indigo-500 text-xl font-bold">Login</h3>
-                <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email" className="bg-gray-100 p-4 rounded text-center max-sm:mb-4" />
-                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" className="bg-gray-100 p-4 rounded text-center" />
+            <form onSubmit={handleSubmit} className='bg-white w-96 mx-auto justify-center rounded p-10 flex flex-col gap-4'>
+            <Link to='/' className="self-end">X</Link>
+                <h3 className="text-blue-300 text-xl font-bold text-center">Login</h3>
+                <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email" className="bg-gray-100 p-4 rounded text-center w-full" />
+                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" className="bg-gray-100 p-4 rounded text-center w-full" />
                 {error && <p style={{ color: 'red' }}>Wrong email or password</p>}
-                <button className='self-center hover:bg-white hover:text-gray-400 border border-3 rounded hover:border-gray-400 p-3 w-60 mt-6 border-indigo-500 bg-indigo-500 text-white font-bold'>Login</button>
+                <button className='self-center rounded p-3 w-60 mt-6 bg-blue-300 text-white font-bold hover:bg-blue-400'>Login</button>
             </form>
         </div>
     )

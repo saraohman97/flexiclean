@@ -35,7 +35,7 @@ function App() {
     setMenuOpen(false)
   }
   return (
-      <div className="App">
+      <div>
 
         <Navbar orderModalOpen={orderModalOpen} menuOpen={menuOpen} setOrderModalOpen={setOrderModalOpen} setMenuOpen={setMenuOpen} closeBtn={closeBtn} />
         <Routes>
@@ -47,9 +47,9 @@ function App() {
           <Route path='/kontakta-oss' element={<Contact />} />
 
           <Route path='/beställning' element={<PutOrder setOrderModalOpen={setOrderModalOpen} />} />
-          <Route path='/logga-in' element={<Login />} />
+          <Route path='/admin' element={<Login />} />
 
-          <Route path='/post/skapa' element={
+          <Route path='/skapa' element={
             <RequireAuth>
               <AddPost />
             </RequireAuth>

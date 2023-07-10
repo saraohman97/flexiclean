@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
 
 
@@ -22,7 +26,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* font-family: 'Ysabeau', sans-serif; */
 }
-h1,
+/* h1,
 h2,
 h3,
 h4 {
@@ -46,7 +50,7 @@ img {
   padding: 3rem 1rem;
   max-width: 1100px;
   margin: 0 auto;
-}
+} */
 
 
 /* ---------buttons----------- */
@@ -166,7 +170,7 @@ td:hover {
 nav {
   background-color: whitesmoke;
   position: sticky;
-  z-index: 10000;
+  z-index: 10;
   top: 0;
   font-size: 15px;
   font-family: 'Ysabeau', sans-serif;

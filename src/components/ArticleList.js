@@ -35,7 +35,7 @@ const ArticleList = ({ sQuery }) => {
     }
 
     return (
-        <aside className="home-sidebar">
+        <aside className="w-96">
             <h3 className='home-sidebar-title'>Nyheter</h3>
             <div className="home-sidebar-data">
                 {loading && <p>Loading...</p>}

@@ -12,7 +12,7 @@ const AddPost = () => {
                 <h1 className='admin-title'>Skriv nyhet</h1>
                 <h4 className='admin-subtitle'>Skriv ett nytt inlägg</h4>
 
-                <PostForm />
+                {/* <PostForm /> */}
             </div>
         </div>
     )
