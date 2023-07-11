@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import PostForm from '../../components/admin/PostForm'
 // import PostForm from '../../components/admin/PostForm'
 
 const EditPost = () => {
@@ -13,8 +14,9 @@ const EditPost = () => {
         <h4 className='admin-subtitle'>Skriv ett nytt inlägg</h4>
 
         {/* {isLoading && <span className="loader"></span>}
-        {isError && <h2>{`error: ${error.message}`}</h2>}
-        {post ? (<PostForm />) : null} */}
+        {isError && <h2>{`error: ${error.message}`}</h2>} */}
+        {/* {post ? (<PostForm />) : null} */}
+        <PostForm />
       </div>
     </div>
   )

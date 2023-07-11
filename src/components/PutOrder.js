@@ -53,7 +53,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
             setOrder('')
             setError(false)
             setSuccess(true)
-            navigate('/')
+            navigate(-1)
             setOrderModalOpen(false)
         }
     }
@@ -64,7 +64,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                 <div>
                     <img className='nav-logo' src={logo} alt="logotype flexiclean blue gray grey logo" />
                 </div>
-                <Link to='/' className="btn-close" onClick={() => setOrderModalOpen(false)}>X</Link>
+                <Link to={-1} className="btn-close" onClick={() => setOrderModalOpen(false)}>X</Link>
             </div>
 
             <form onSubmit={handleSubmit}>

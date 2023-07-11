@@ -167,7 +167,7 @@ td:hover {
 
 
 /* ---------Navbar----------- */
-nav {
+/* nav {
   background-color: whitesmoke;
   position: sticky;
   z-index: 10;
@@ -202,15 +202,17 @@ nav {
 }
 .nav-links {
   display: none;
-}
+} */
 
 /* ---------dropdown----------- */
+/* SPARA, KAN INTE I TAILWIND */
 .dropdown {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   display: flex;
   align-items: center;
   gap: .5rem;
+  height: 100%;
 }
 .dropdown-content {
   display: none;
@@ -218,7 +220,7 @@ nav {
   background-color: white;
   width: 11rem;
   z-index: 20;
-  top: 2.9rem;
+  top: 2.8rem;
   right: 0;
 
   box-shadow: var(--box-shadow);
@@ -311,7 +313,7 @@ nav {
 
 
 /* ---------sidebar section----------- */
-.home-sidebar {
+/* .home-sidebar {
   margin-top: 2rem;
   overflow-y: scroll;
   max-height: 1800px;
@@ -343,7 +345,7 @@ nav {
 }
 .article-img {
   height: 8rem;
-}
+} */
 
 
 
