@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { collection, deleteDoc, doc, onSnapshot, query } from 'firebase/firestore';
 import { db } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
-// import Article from './Article'
 import { BsTrash } from 'react-icons/bs';
 import { AiOutlineEdit } from 'react-icons/ai';
 
@@ -48,9 +47,9 @@ const ArticleList = ({ sQuery }) => {
                     <Article key={post.id} post={post} handleDelete={handleDelete} />
                 ))} */}
                 {posts && posts.map(post => (
-                    <div key={post.id} className='flex flex-col gap-4 w-96'>
-                        <h2>{post.title}</h2>
-                        <small>{post.timestamp.toDate().toString()}</small>
+                    <div key={post.id} className='flex flex-col gap-2 w-96 mb-10'>
+                        <h2 className='text-2xl'>{post.title}</h2>
+                        <small className='text-gray-500'>{post.timestamp.toDate().toString()}</small>
                         <img src={post.imgUrl} className='max-h-40 w-full object-cover' alt="" />
                         <button className='btn btn-gray'>Läs mer</button>
                         {currentUser && (

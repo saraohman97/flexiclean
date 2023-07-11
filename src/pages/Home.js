@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import img from '../assets/28712055-9XX6s.jpg'
-import Article from '../components/Article'
 import ArticleList from '../components/ArticleList'
 import bg from '../assets/bg.jpg'
 
