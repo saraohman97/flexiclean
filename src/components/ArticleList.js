@@ -4,6 +4,7 @@ import { db } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
 import { BsTrash } from 'react-icons/bs';
 import { AiOutlineEdit } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const ArticleList = ({ sQuery }) => {
     const [posts, setPosts] = useState([])
@@ -49,13 +50,13 @@ const ArticleList = ({ sQuery }) => {
                 {posts && posts.map(post => (
                     <div key={post.id} className='flex flex-col gap-2 w-96 mb-10'>
                         <h2 className='text-2xl'>{post.title}</h2>
-                        <small className='text-gray-500'>{post.timestamp.toDate().toString()}</small>
+                        <small className='text-gray-500'>{post.timestamp.toDate().toDateString()}</small>
                         <img src={post.imgUrl} className='max-h-40 w-full object-cover' alt="" />
                         <button className='btn btn-gray'>Läs mer</button>
                         {currentUser && (
-                            <div className='self-end'>
-                                <button><BsTrash className='text-xl hover:text-red-500 mr-4' /></button>
-                                <button><AiOutlineEdit className='text-xl hover:text-blue-500' /></button>
+                            <div className='self-end flex'>
+                                <button><BsTrash onClick={() => handleDelete(post.id)} className='text-xl hover:text-red-500 mr-4' /></button>
+                                <Link to={'/skapa/' + post.id}><AiOutlineEdit className='text-xl hover:text-blue-500' /></Link>
                             </div>
                         )}
                     </div>

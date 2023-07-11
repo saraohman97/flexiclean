@@ -59,7 +59,14 @@ function App() {
             <NewPost />
           </RequireAuth>
         } />
-        <Route path='/post' element={
+
+        <Route path='/skapa/:id' element={
+          <RequireAuth>
+            <NewPost />
+          </RequireAuth>
+        } />
+
+        {/* <Route path='/post' element={
           <RequireAuth>
             <PostList />
           </RequireAuth>
@@ -73,7 +80,7 @@ function App() {
           <RequireAuth>
             <EditPost />
           </RequireAuth>
-        } />
+        } /> */}
       </Routes>
 
       <Footer />

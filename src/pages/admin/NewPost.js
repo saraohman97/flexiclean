@@ -130,7 +130,7 @@ const NewPost = () => {
                 <div className='relative'>
                     <label htmlFor="text" className='absolute top-2 left-2 text-sm text-gray-400'>Text</label>
                     <textarea
-                        value={form.firstParagraph}
+                        value={form.body}
                         name='body'
                         onChange={handleChange}
                         type="text"
