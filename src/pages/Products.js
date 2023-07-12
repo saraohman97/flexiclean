@@ -18,8 +18,10 @@ const Products = ({ setOrderModalOpen }) => {
           <p className='text-gray-500'>Upptäck vårt utbud av kassetter</p>
         </div>
         <img src={img} className='w-full' alt="Brunn i staden vid soluppgång" />
-        <p className='products-hero-data'>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar och en förståelse för de utmaningar kommuner och privata aktörer ställs inför varje dag. FlexiClean är laddad med egenskaper som avsevärt förbättrar och förenklar arbetet med inspektion och underhåll av brunnen. Och den kan anpassas för rening i alla tänkbara miljöer.</p>
-        <div className="btn-wrapper"><Link to='/dokumentcenter'><button className='btn btn-gray'>Läs mer</button></Link></div>
+        <p className='w-5/6 mt-4'>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar och en förståelse för de utmaningar kommuner och privata aktörer ställs inför varje dag. FlexiClean är laddad med egenskaper som avsevärt förbättrar och förenklar arbetet med inspektion och underhåll av brunnen. Och den kan anpassas för rening i alla tänkbara miljöer.</p>
+          <Link to='/dokumentcenter'>
+            <button className='btn btn-gray mt-4'>Läs mer</button>
+          </Link>
       </section>
 
       {/* first product section */}
@@ -160,7 +162,7 @@ const Products = ({ setOrderModalOpen }) => {
       </section>
 
       {/* forth section */}
-      <section className='container mx-auto bg-gray-100 rounded-xl flex flex-col px-10 py-20 gap-20'>
+      <section className='container mx-auto bg-gray-100 flex flex-col px-10 py-20 gap-20'>
         <h1 className='text-4xl text-center'>Filterkassettens uppbyggnad</h1>
 
         <div className="flex gap-10">

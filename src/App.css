@@ -26,6 +26,9 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* font-family: 'Ysabeau', sans-serif; */
 }
+.h_450 {
+  height: 450px;
+}
 /* h1,
 h2,
 h3,
