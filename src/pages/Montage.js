@@ -14,36 +14,39 @@ const Montage = () => {
 
   return (
     <>
-      <section className='section projects-hero'>
-        <div className="montage-hero-heading">
-          <h1 className='projects-hero-title'>Montage</h1>
-          <p className='projects-hero-subtitle'>Montering & byte av filterdynor är busenkelt</p>
+      <section className='container mx-auto px-20 my-32'>
+        <div className="flex justify-between items-center pb-6">
+          <h1 className='text-4xl'>Montage</h1>
+          <p className='text-gray-400'>Montering & byte av filterdynor är busenkelt</p>
         </div>
 
-        <div className="montage-wrapper">
-          <div className="montage-focused">
-            <iframe className='montage-focused-video' src={!switchVideo ? 'https://www.youtube.com/embed/HU7RE3Jm3bE?autoplay=1&mute=1' : 'https://www.youtube.com/embed/ZK2RtdIK_e0?autoplay=1&mute=1'} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h1 className='montage-focused-title'>{!switchVideo ? 'Installation.wmv' : 'Filterbyte.wmv'}</h1>
-            <div className="montage-focused-heading">
-              <a href='https://www.youtube.com/@FlexiClean' className='montage-user'>
-                <h4 className='montage-user-icon'>F</h4>
+        <div className="flex gap-10">
+          <div className="flex-1">
+            <iframe className='w-full h-full' src={!switchVideo ? 'https://www.youtube.com/embed/HU7RE3Jm3bE?autoplay=1&mute=1' : 'https://www.youtube.com/embed/ZK2RtdIK_e0?autoplay=1&mute=1'} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h1 className='text-xl mt-1'>{!switchVideo ? 'Installation.wmv' : 'Filterbyte.wmv'}</h1>
+            <div className="flex justify-between items-center">
+              <a href='https://www.youtube.com/@FlexiClean' className='flex items-center gap-2 mt-1'>
+                <h4 className='w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center'>F</h4>
                 <small>FlexiClean</small>
               </a>
-              <div className="btn-wrapper">
+
+              <div className="flex gap-4">
                 <a href="https://www.youtube.com/watch?v=HU7RE3Jm3bE"><button className='btn btn-gray'>Ladda ner</button></a>
                 <a href="https://www.youtube.com/watch?v=HU7RE3Jm3bE"><button className='btn btn-gray'>Dela</button></a>
               </div>
             </div>
           </div>
 
-          <div className="montage-suggestion-videos">
-            <div className="montage-videos-item" onClick={toggleSwitchVideo}>
-              <img src={!switchVideo ? video : video2} className='montage-video' alt="flexiclean drift- och skötselanvisning" />
-              <h4 className='montage-title'>{switchVideo ? 'Installation.wmv' : 'Filterbyte.wmv'}</h4>
+          <div className="w-72 flex flex-col justify-between gap-10">
+            <div className='rounded-xl bg-gray-200 flex-1 hover:scale-105' onClick={toggleSwitchVideo}>
+              <img src={!switchVideo ? video : video2} className='rounded-t-xl' alt="flexiclean drift- och skötselanvisning" />
+              <h4 className='p-2'>{switchVideo ? 'Installation.wmv' : 'Filterbyte.wmv'}</h4>
             </div>
-            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/977202/h/4ec555ee46f78678e4a7b7418b1dfd18/FlexiClean_driftochunderh%C3%A5ll' className="montage-videos-item">
-              <img src={montagePDF} className='montage-video' alt="" />
-              <h4 className='montage-title'>Drift- och skötselanvisning</h4>
+            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/977202/h/4ec555ee46f78678e4a7b7418b1dfd18/FlexiClean_driftochunderh%C3%A5ll'>
+              <div className="rounded-xl bg-gray-200 flex-1 hover:scale-105">
+                <img src={montagePDF} className='rounded-t-xl h-32 w-full object-cover border border-gray-200' alt="" />
+                <h4 className='p-2'>Drift- och skötselanvisning</h4>
+              </div>
             </a>
           </div>
         </div>
