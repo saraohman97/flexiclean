@@ -34,12 +34,13 @@ const Home = () => {
                         <br />2019. Vinnare. Västmanlands Klimat- och Miljöpris.
                     </p>
 
-                    <h1 className='home-main-subtitle'>FlexiClean</h1>
-                    <div className='home-images-wrapper'>
+                    <h1 className='text-4xl mb-10 mt-20'>FlexiClean</h1>
+                    <div className='flex justify-between w-full h-96'>
                         <img src='https://dst15js82dk7j.cloudfront.net/252829/72746504-FugNx.jpg' alt="" />
                         <img src='https://h24-original.s3.amazonaws.com/252829/24452359-1YbU8.jpg' alt="" />
                         <img src='https://dst15js82dk7j.cloudfront.net/252829/78558023-2311B.jpg' alt="" />
                     </div>
+                    <br />
                     <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar och en förståelse för de utmaningar kommuner och privata aktörer ställs inför varje dag. FlexiClean är laddad med egenskaper som avsevärt förbättrar och förenklar arbetet med inspektion och underhåll av brunnen. Och den kan anpassas för rening i alla tänkbara miljöer.</p>
                     <br />
                     <h4 className='text-xl'>En insats för bättre vatten</h4>
@@ -51,7 +52,7 @@ const Home = () => {
                     <p>Produkten ska naturligtvis göra sitt jobb i brunnen och rena dagvattnet. Men det räcker inte. De som sköter underhållet ska också kunna göra sitt jobb. Att minska antalet lyft blir allt viktigare, särskilt när utveckling går mot fler brunnar med filter som ska inspekteras och bytas. <br /> <br />
                         I det avseendet blir FlexiClean ett lyft, men inte ett onödigt sådant. Hållaren upptar maximalt 50 procent av en brunns tvärsnittyta och behöver inte lyftas upp för att avgöra graden av mekanisk eller kemisk igensättning. Den behöver heller inte lyftas upp vid slamsugning eller ångning. Slangen får plats ändå. Och när det väl är dags att byta filter är det bara att dra ut insatsen, kassetten som utgör produktens inre del. All användarvänlighet kapar naturligtvis tid och minskar antalet moment i arbetet − det spar både pengar och ryggar. Att produkten ger en bättre arbetsmiljö är bra, men den ska också fungera i flera olika miljöer. Därför är FlexiClean inte anpassad för ett speciellt ändamål och kan därmed sanera gångtunnlar lika bra som bensinstationer och parkeringshus. Tur är väl det, för det finns varken universalfilter eller lyckobrunnar. Bara önsketänkande och visioner kring miljön som kräver hårt arbete för att förverkliga. En bra start är att investera i en filterhållare värd vatten.</p>
 
-                    <h1 className='text-4xl'>Historia</h1>
+                    <h1 className='text-4xl mb-10 mt-20'>Historia</h1>
                     <div className='home-main-img'>
                         <img src='https://dst15js82dk7j.cloudfront.net/252829/72745337-3J24D.jpg' alt="" />
                     </div>

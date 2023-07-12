@@ -238,7 +238,7 @@ td:hover {
 
 
 /* ---------menu modal----------- */
-.menu-content {
+/* .menu-content {
   position: absolute;
   z-index: 50;
   bottom: 0;
@@ -265,12 +265,12 @@ td:hover {
 }
 .menu-df .nav-link {
   color: var(--third-clr);
-}
+} */
 
 
 
 /* ---------hero section----------- */
-.hero {
+/* .hero {
   background-image: url(./assets/bg.jpg);
   background-size: cover;
   background-position: center;
@@ -288,10 +288,10 @@ td:hover {
 .hero h1 {
   font-weight: 800;
   color: var(--text-clr-light);
-}
+} */
 
 /* ---------main section----------- */
-.home {
+/* .home {
   gap: 3rem;
 }
 .home-main-title {
@@ -309,7 +309,7 @@ td:hover {
 }
 .home-main-subtitle {
   margin-block: 3rem 1rem;
-}
+} */
 
 
 /* ---------sidebar section----------- */

@@ -13,11 +13,6 @@ import ScrollToTop from './components/ScrollToTop';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import PostList from './pages/admin/PostList';
-import Post from './pages/admin/Post';
-import EditPost from './pages/admin/EditPost';
-
-// import AddPost from './pages/admin/AddPost';
 import PutOrder from './components/PutOrder';
 import Login from './pages/admin/Login';
 import { useContext } from 'react';
@@ -65,22 +60,6 @@ function App() {
             <NewPost />
           </RequireAuth>
         } />
-
-        {/* <Route path='/post' element={
-          <RequireAuth>
-            <PostList />
-          </RequireAuth>
-        } />
-        <Route path='/post/:id' element={
-          <RequireAuth>
-            <Post />
-          </RequireAuth>
-        } />
-        <Route path='/post/:id/uppdatera' element={
-          <RequireAuth>
-            <EditPost />
-          </RequireAuth>
-        } /> */}
       </Routes>
 
       <Footer />
