@@ -31,10 +31,10 @@ const Products = ({ setOrderModalOpen }) => {
         <div className='flex-1 ml-20'>
           <h1 className='text-4xl mb-4'>FlexiClean filterkassett för dagvattenrening</h1>
           <p><strong>FlexiClean är filterkassett för rening av dagvatten passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas.</strong> <br /> <br />Kassetten flödar 160 l/min filtrerat vatten och är försedd med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år. Att tänka på. FlexiClean  kräver minst 800mm/1000 djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 300mm i diameter”.</p>
-          <div className='btn-wrapper'>
+          <div className='flex gap-6 mt-10'>
             <button className='btn btn-blue' onClick={() => setOrderModalOpen(true)}>Beställ</button>
             <details>
-              <summary className='btn btn-gray btn-filter'>Se storlekar</summary>
+              <summary className='btn btn-gray'>Se storlekar</summary>
               <table>
                 <tr>
                   <th><p>Artikelnummer</p></th>
@@ -107,10 +107,10 @@ const Products = ({ setOrderModalOpen }) => {
           <p> <strong>FlexiClean granulatfilter rening av dagvatten samt filtrering av granulat passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor, PAH och Pfas, samt filtrerar partiklar ned till 42 mikrometer. </strong> <br /> <br /> Kassetten flödar 45 l/min filtrerat vatten och filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.
 
             Att tänka på. FlexiClean Granulat samt kräver minst 800/1000 mm djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 330mm i diameter".</p>
-          <div className='btn-wrapper'>
+          <div className='flex gap-6 mt-10'>
             <button className='btn btn-blue' onClick={() => setOrderModalOpen(true)}>Beställ</button>
             <details>
-              <summary className='btn btn-gray btn-filter'>Se storlekar</summary>
+              <summary className='btn btn-gray'>Se storlekar</summary>
               <table className='showcase2-table'>
                 <tr>
                   <th><p>Artikelnummer</p></th>
@@ -149,20 +149,20 @@ const Products = ({ setOrderModalOpen }) => {
           <h1 className='text-4xl mb-10'>Västerås Stad</h1>
           <p>Tidigare har Västerås Stad redovisade sina resultat efter tester av FlexiClean graulatfilter. Tillsammans med ett fantastiskt arbete av driftpersonalen på Västerås Stad och FlexiClean granulatfilter kunde man rapportera NOLL utsläpp av granulat i dagvattnet.<br /> <br />”Kalmar-rapporten” Sveriges första vetenskapliga studie av spridningen av mikroplast från en konstgräsplan är publicerad: Den potentiella mikroplastspridningen var 54.9 kg, allt utom 100 gram kunde stoppas med skötselåtgärder och 10,7 gram gummigranulat spreds till dagvattennätet.</p>
           <div className='flex items-center gap-10 mt-10'>
-            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/1226420/h/bda295b64c67f79a461bf7332e640edd/RAPPORT+%2B+Mikroplastspridning+fr%C3%A5n+en+modernt+utformad+konstgr%C3%A4splan+med+skydds%C3%A5tg%C3%A4rder' className="bg-indigo-100 rounded-2xl flex-1 text-center">
+            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/1226420/h/bda295b64c67f79a461bf7332e640edd/RAPPORT+%2B+Mikroplastspridning+fr%C3%A5n+en+modernt+utformad+konstgr%C3%A4splan+med+skydds%C3%A5tg%C3%A4rder' className="bg-indigo-100 rounded-2xl flex-1 text-center h-48">
               <img src={kalmar} alt="kalmar rapporten för bättre dagvattenrening av FlexiClean" className='rounded-t-2xl h-32 w-full object-cover' />
-              <p className='p-1'>Läs Kalmar-rapporten</p>
+              <p className='p-1'>Läs Kalmar- <br />rapporten</p>
             </a>
-            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/1183421/h/1eebd9a8d8176c2b314ce13813cc886b/framtida_handtering_av_konstgr%C3%A4splaner_i_V%C3%A4ster%C3%A5s_stad' className="bg-indigo-100 rounded-2xl flex-1 text-center">
+            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/1183421/h/1eebd9a8d8176c2b314ce13813cc886b/framtida_handtering_av_konstgr%C3%A4splaner_i_V%C3%A4ster%C3%A5s_stad' className="bg-indigo-100 rounded-2xl flex-1 text-center h-48">
               <img src={vasteras} alt="västerås rapporten för bättre dagvattenrening av FlexiClean" className='rounded-t-2xl h-32 w-full object-cover' />
-              <p className='p-1'>Läs Västerås-rapporten</p>
+              <p className='p-1'>Läs Västerås- <br />rapporten</p>
             </a>
           </div>
         </div>
       </section>
 
       {/* forth section */}
-      <section className='container mx-auto bg-gray-100 flex flex-col px-10 py-20 gap-20'>
+      <section className='container mx-auto bg-gray-100 flex flex-col px-10 py-20 gap-20 mb-20'>
         <h1 className='text-4xl text-center'>Filterkassettens uppbyggnad</h1>
 
         <div className="flex gap-10">

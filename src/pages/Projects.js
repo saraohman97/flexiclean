@@ -4,13 +4,13 @@ import ovako from '../assets/project/ovako.svg'
 import eskiltuna from '../assets/project/eskiltuna2.svg'
 import project2 from '../assets/project/project2.jpg'
 import project3 from '../assets/project/project3.jpg'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 const Projects = () => {
   return (
     <div className='container mx-auto mt-40 px-20'>
       {/* first section */}
-      <section className=''>
+      <section>
         <div className="flex justify-between px-10">
           <h1 className='text-4xl'>Minnesvärda projekt</h1>
           <p className='text-gray-400'>Upptäck vårt utbud av kassetter</p>
@@ -20,7 +20,7 @@ const Projects = () => {
 
       {/* second section */}
       <section className='text-center w-4/6 mx-auto my-20'>
-        <h1 className='projects-intro-title'>Kunden i center</h1>
+        <h1 className='text-2xl'>Kunden i center</h1>
         <p>Prioriteringar har alltid varit att kunna lösa kundernas problem avseende process- eller dag-vattenfrågor oavsett om FlexiClean är lösningen eller om vi gemensamt med våra samarbetspartners kan lösa problemen. Vi känner att vi är ett litet företag men stora resurser för att lösa de problem just ni har.</p>
       </section>
 
@@ -45,7 +45,7 @@ const Projects = () => {
       </section>
 
       {/* forth section */}
-      <section className='my-40 text-center'>
+      <section className='my-40 flex flex-col justify-center text-center items-center'>
         <h1 className='text-4xl mb-10'>Titta på vår Google Maps karta över <br /> våra leveranse.</h1>
         <a href="https://www.google.com/maps/d/edit?mid=1NgcNrP7tE1DlDEef-NoOcD4AiQb0tChd&usp=sharing" rel="noreferrer" target="_blank"><button className='btn btn-gray'>Kolla karta</button></a>
       </section>
@@ -57,11 +57,11 @@ const Projects = () => {
           <h1 className='text-4xl my-6'>FlexiClean filterbrunnar för dagvattenrening</h1>
           <p>FlexiClean filterbrunnar för rening av dagvatten. Dessa är för permanent placering men kan även användas mobilt. Filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas. Filterbrunnen är fördelad på en sedimenteringsdel samt en filtreringsdel . Filterbrunnen flödar 320-640 l/min filtrerat vatten beroende på dimension Filtren är försedda med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.</p>
           <div className="flex gap-4 mt-6">
-            <Link to='/kontakta-oss'>
-              <button className='btn btn-blue'>Ta kontakt</button>
-            </Link>
+            <div onClick={Navigate('/kontakta-oss')} className='btn btn-blue'>Ta kontakt</div>
             <details>
-              <summary className='btn btn-gray btn-filter'>Se storlekar</summary>
+                <summary className='btn btn-gray'>
+                  Se storlekar
+                </summary>
               <table>
                 <tr>
                   <th><p>Artikelnummer</p></th>
