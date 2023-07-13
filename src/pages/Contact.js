@@ -48,7 +48,9 @@ const Contact = () => {
     <section className='container mx-auto my-40 px-20'>
       <h1 className='text-4xl text-center mb-20'>Kontakta oss</h1>
       <div className='flex gap-20 items-center'>
-        <form onSubmit={handleSubmit} className='w-2/5'>
+        <form onSubmit={handleSubmit} className='w-2/5 min-w-96'>
+        <h2 className='text-2xl'>Skicka ett meddelande</h2>
+          <p className='mb-2'>Vid frågor om dagvatten, företaget och annat</p>
           {error && <p style={{ color: 'red', marginBottom: '1rem' }}>Fälten kan inte vara tomma. </p>}
           {success && <p style={{ color: 'green', marginBottom: '1rem' }}>Ditt meddelande har skickats. </p>}
 
@@ -101,7 +103,7 @@ const Contact = () => {
         </form>
 
         <div className="flex-1">
-          <div className='flex flex-wrap gap-6 mb-6 items-end'>
+          <div className='flex justify-between gap-6 mb-6 items-end'>
             <div>Öppettider:<div>må–fr: 07.00–16.00 <br />lö: stängt <br />sö: stängt</div></div>
             <div>Kontor: <div>Brandthovdagatan 16 <br /> 721 35 Västerås</div></div>
             <div>

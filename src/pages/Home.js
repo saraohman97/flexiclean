@@ -10,13 +10,13 @@ const Home = () => {
         <>
             <header className='h-screen'>
                 <img src={bg} className='h-full w-full object-cover' alt="" />
-                <div className="container mx-auto flex justify-center h-full flex-col absolute inset-0 mt-20 text-white">
-                    <h1 className='text-6xl'>Välkommen till <br /> FlexiClean</h1>
-                    <p className='text-xl w-4/6'>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
+                <div className="container mx-auto flex justify-center h-full flex-col absolute inset-0 mt-20 text-white max-sm:px-4">
+                    <h1 className='text-6xl max-sm:text-4xl'>Välkommen till <br /> FlexiClean</h1>
+                    <p className='text-xl w-4/6 max-sm:text-sm'>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
                 </div>
             </header>
 
-            <section className='container mx-auto flex flex-row gap-10 my-20'>
+            <section className='container mx-auto flex flex-row gap-10 my-20 max-md:flex-col max-sm:px-4'>
                 <main className="flex-1">
 
                     <h1 className='text-4xl mb-10'>Västmanlands miljö- och <br /> klimatpris 2019</h1>

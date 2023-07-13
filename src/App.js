@@ -33,7 +33,7 @@ function App() {
     setMenuOpen(false)
   }
   return (
-    <div>
+    <div className='overflow-hidden'>
 
       <Navbar orderModalOpen={orderModalOpen} menuOpen={menuOpen} setOrderModalOpen={setOrderModalOpen} setMenuOpen={setMenuOpen} closeBtn={closeBtn} />
 
