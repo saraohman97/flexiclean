@@ -10,7 +10,7 @@ const Footer = () => {
   const { currentUser } = useContext(AuthContext)
 
   return (
-    <div className='absolute bottom-0 w-full bg-gray-100 p-10 flex flex-col gap-2 justify-center items-center'>
+    <div className='w-full bg-gray-100 p-10 flex flex-col gap-2 justify-center items-center'>
       <div className="flex items-center gap-6">
         <Link to='/' className='hover:text-blue-400'>Hem</Link>
         <Link to='/produkter' className='hover:text-blue-400'>Produkter</Link>

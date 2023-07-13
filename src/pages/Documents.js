@@ -3,7 +3,7 @@ import headerImg from '../assets/document.jpg'
 
 const Documents = () => {
   return (
-    <section className='container mx-auto mt-40 px-20'>
+    <section className='container mx-auto mt-40 px-20 mb-20'>
       <div className='flex flex-col gap-4'>
         <h1 className='text-4xl text-center'>Dokumentcenter</h1>
         <p className='text-center w-4/6 self-center mb-10'>Här publicerar vi fortlöpande tester utförda på FlexiClean. Redan för 14 år sedan blev vi tipsade om att använda bark som filtermaterial. De senare åren av forskning visar att vi valt rätt. Ladda gärna ned rapporterna nedan.</p>
