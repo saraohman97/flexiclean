@@ -21,7 +21,7 @@ const Home = () => {
 
                     <h1 className='text-4xl mb-10'>Västmanlands miljö- och <br /> klimatpris 2019</h1>
                     <div className='w-full'><img src={img} alt="Peder Eneroth och Micheal Eneroth vinner västmanlands miljö- och klimatpris 2019" /></div>
-                    <p>
+                    <div>
                         <br /><h3 className='text-xl'>Juryns motivering</h3>
                         <br />Västmanlands miljö- och klimatpris 2019 går till FlexiClean AB för sitt arbete med att förbättra vattenmiljöer genom att ta tag i en av vår tids stora miljöproblem, kemikalier som sprids i dagvattnet. FlexiClean har utvecklat filter som fångar upp tungmetaller, oljeföroreningar och även PFAS. PFAS är cancerframkallande ämnen som bland annat finns i våra textilier och ibland beskrivs som vår tids värsta miljögift.
                         <br /> <br />FlexiClean har även tagit sig fram och hittat en lösning kring mikroplaster som sprids från konstgräsplaner. Genom att på det här sättet förbättra våra vattenmiljöer har Flexiclean på ett förtjänstfullt sätt bidragit till att Västmanland har tagit ett viktigt steg vidare till Miljö- och klimatrådets vision, ett län som är miljö- och klimatförebild 2030. Och klimatförebild 2030.
@@ -32,7 +32,7 @@ const Home = () => {
                         <br />2016: Finalist. Västerås Stads Miljöpris
                         <br />2019. Finalist innovationstävling SKAPA.
                         <br />2019. Vinnare. Västmanlands Klimat- och Miljöpris.
-                    </p>
+                    </div>
 
                     <h1 className='text-4xl mb-10 mt-20'>FlexiClean</h1>
                     <div className='flex justify-between w-full h-96'>
@@ -57,7 +57,7 @@ const Home = () => {
                         <img src='https://dst15js82dk7j.cloudfront.net/252829/72745337-3J24D.jpg' alt="" />
                     </div>
                     <br />
-                    <p>Produkten FlexiClean togs fram av Leif Eneroth tillsammans med stöd och hjälp från Mälardalens Högskola MDH redan 2004, detta inom bolaget AB Aros Rör & Svets. 2009 antogs FlexiClean i inkubatorprogrammet Stockholm Innovation and Growth (STING) och bolaget FlexiClean AB grundades i Kista. Efter ”examen” 2011 flyttades bolaget tillbaka till Västerås där vi idag delar lager och verkstad med AB Aros Rör & Svets.
+                    <div>Produkten FlexiClean togs fram av Leif Eneroth tillsammans med stöd och hjälp från Mälardalens Högskola MDH redan 2004, detta inom bolaget AB Aros Rör & Svets. 2009 antogs FlexiClean i inkubatorprogrammet Stockholm Innovation and Growth (STING) och bolaget FlexiClean AB grundades i Kista. Efter ”examen” 2011 flyttades bolaget tillbaka till Västerås där vi idag delar lager och verkstad med AB Aros Rör & Svets.
                         <br /> <br />
                         2004: FlexiClean lanserades på marknaden.
                         <br />
@@ -94,7 +94,7 @@ const Home = () => {
                         2019. Finalist Länsstyrelsen Västmanlands innovationstävling SKAPA.
                         <br />
                         2019. Vinnare. Västmanlands Klimat- och Miljöpris.
-                    </p>
+                    </div>
                 </main>
 
                 <ArticleList sQuery={sQuery} />

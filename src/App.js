@@ -16,10 +16,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 import NewPost from './pages/admin/NewPost';
-import PutOrder from './pages/PutOrder';
 
 function App() {
   const { currentUser } = useContext(AuthContext)
+  const [order, setOrder] = useState(false)
 
   const RequireAuth = ({ children }) => {
     return currentUser ? children : <Navigate to='/' />
@@ -28,16 +28,15 @@ function App() {
   return (
     <div className='overflow-hidden'>
 
-      <Navbar />
+      <Navbar order={order} setOrder={setOrder} />
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/produkter' element={<Products />} />
+        <Route path='/produkter' element={<Products setOrder={setOrder} />} />
         <Route path='/dokumentcenter' element={<Documents />} />
         <Route path='/projekt' element={<Projects />} />
         <Route path='/montage' element={<Montage />} />
         <Route path='/kontakta-oss' element={<Contact />} />
-        <Route path='/beställ' element={<PutOrder />} />
 
         <Route path='/skapa' element={
           <RequireAuth>

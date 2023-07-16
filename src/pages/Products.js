@@ -9,8 +9,7 @@ import part1 from '../assets/part1.jpg'
 import part2 from '../assets/part2.jpg'
 import part3 from '../assets/part3.jpg'
 
-const Products = () => {
-  const navigate = useNavigate()
+const Products = ({ setOrder }) => {
   return (
     <>
       <section className='container mx-auto mt-40 px-20 max-md:px-2'>
@@ -35,7 +34,7 @@ const Products = () => {
           <h1 className='text-4xl mb-4'>FlexiClean filterkassett för dagvattenrening</h1>
           <p><strong>FlexiClean är filterkassett för rening av dagvatten passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas.</strong> <br /> <br />Kassetten flödar 160 l/min filtrerat vatten och är försedd med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år. Att tänka på. FlexiClean  kräver minst 800mm/1000 djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 300mm i diameter”.</p>
           <div className='flex gap-6 mt-10'>
-            <button className='btn btn-blue' onClick={() => navigate('/beställ')}>Beställ</button>
+            <button className='btn btn-blue' onClick={() => setOrder(true)}>Beställ</button>
             <details>
               <summary className='btn btn-gray'>Se storlekar</summary>
               <table>
@@ -114,7 +113,7 @@ const Products = () => {
 
             Att tänka på. FlexiClean Granulat samt kräver minst 800/1000 mm djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 330mm i diameter".</p>
           <div className='flex gap-6 mt-10'>
-            <button className='btn btn-blue' onClick={() => navigate('/beställ')}>Beställ</button>
+            <button className='btn btn-blue' onClick={() => setOrder(true)}>Beställ</button>
             <details>
               <summary className='btn btn-gray'>Se storlekar</summary>
               <table className='showcase2-table'>

@@ -1,17 +1,17 @@
 import logo from '../assets/logotype.png'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineDown } from "react-icons/ai";
 import { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import PutOrder from '../components/PutOrder'
 
-const Navbar = () => {
+const Navbar = ({ order, setOrder }) => {
     const [menu, setMenu] = useState(false)
     const [showDropdown, setShowDropdown] = useState(true)
     const { currentUser, dispatch } = useContext(AuthContext)
-    const navigate = useNavigate()
 
     const logout = () => {
         signOut(auth).then(() => {
@@ -19,6 +19,11 @@ const Navbar = () => {
         }).catch((error) => {
             console.log(error)
         });
+    }
+
+    const changeModal = () => {
+        setOrder(true)
+        setMenu(false)
     }
 
     return (
@@ -36,7 +41,7 @@ const Navbar = () => {
                             <AiOutlineMenu className='lg:hidden text-2xl' />
                         </div>
                         <div className="flex flex-row gap-10 items-center max-lg:hidden">
-                            <div className='dropdown py-4' onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
+                            <div className='dropdown py-4' onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => changeModal()}>
                                 Produkter
                                 <AiOutlineDown />
                                 {showDropdown && (
@@ -49,11 +54,12 @@ const Navbar = () => {
                             </div>
                             <NavLink to='/dokumentcenter'>Documentcenter</NavLink>
                             <NavLink to='/kontakta-oss'>Kontakta oss</NavLink>
-                            <button className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => navigate('/beställ')}>Beställ</button>
+                            <button className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => setOrder(true)}>Beställ</button>
                         </div>
                         {menu && (
                             <>
                                 <div onClick={() => setMenu(false)} className='absolute inset-0 h-screen bg-black opacity-80' />
+
                                 <div className='absolute top-0 right-0 bg-white opacity-100 h-screen flex flex-col gap-6 items-end max-sm:p-4 max-sm:w-60 w-96 py-10 px-16'>
                                     <div className='mb-10 text-xl' onClick={() => setMenu(false)}><AiOutlineClose /></div>
                                     <NavLink onClick={() => setMenu(false)} to='/produkter'>Produkter</NavLink>
@@ -66,10 +72,11 @@ const Navbar = () => {
 
                                     <NavLink to='/dokumentcenter' onClick={() => setMenu(false)}>Documentcenter</NavLink>
                                     <NavLink to='/kontakta-oss' onClick={() => setMenu(false)}>Kontakta oss</NavLink>
-                                    <button className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => navigate('/beställ')}>Beställ</button>
+                                    <button className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => changeModal()}>Beställ</button>
                                 </div>
                             </>
                         )}
+                        {order && <PutOrder setOrder={setOrder} />}
                     </>
                 )}
 
