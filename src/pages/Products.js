@@ -12,23 +12,25 @@ import part3 from '../assets/part3.jpg'
 const Products = ({ setOrderModalOpen }) => {
   return (
     <>
-      <section className='container mx-auto mt-40 px-20'>
-        <div className="flex justify-between mb-10 mx-10 items-end">
+      <section className='container mx-auto mt-40 px-20 max-md:px-2'>
+        <div className="flex justify-between mb-10 mx-10 max-md:mx-0 items-end max-md:flex-col">
           <h1 className='text-4xl'>Produkter</h1>
           <p className='text-gray-500'>Upptäck vårt utbud av kassetter</p>
         </div>
         <img src={img} className='w-full' alt="Brunn i staden vid soluppgång" />
         <p className='w-5/6 mt-4'>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar och en förståelse för de utmaningar kommuner och privata aktörer ställs inför varje dag. FlexiClean är laddad med egenskaper som avsevärt förbättrar och förenklar arbetet med inspektion och underhåll av brunnen. Och den kan anpassas för rening i alla tänkbara miljöer.</p>
-          <Link to='/dokumentcenter'>
-            <button className='btn btn-gray mt-4'>Läs mer</button>
-          </Link>
+        <Link to='/dokumentcenter'>
+          <button className='btn btn-gray mt-4'>Läs mer</button>
+        </Link>
       </section>
 
       {/* first product section */}
-      <section className='container mx-auto flex flex-row-reverse justify-around items-center h-screen'>
-        <img src={product_one} className='h-5/6 flex-1 object-contain' alt="FlexiClean filterkassett för dagvattenrening" />
+      <section className='container mx-auto flex flex-row-reverse justify-around items-center max-md:flex-col my-20 max-md:my-20 max-md:px-2'>
+        <div className='flex-1 flex justify-center'>
+          <img src={product_one} className='object-contain h_450 max-md:h-80' alt="FlexiClean filterkassett för dagvattenrening" />
+        </div>
 
-        <div className='flex-1 ml-20'>
+        <div className='flex-1 ml-20 max-md:ml-0'>
           <h1 className='text-4xl mb-4'>FlexiClean filterkassett för dagvattenrening</h1>
           <p><strong>FlexiClean är filterkassett för rening av dagvatten passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas.</strong> <br /> <br />Kassetten flödar 160 l/min filtrerat vatten och är försedd med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år. Att tänka på. FlexiClean  kräver minst 800mm/1000 djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 300mm i diameter”.</p>
           <div className='flex gap-6 mt-10'>
@@ -97,12 +99,15 @@ const Products = ({ setOrderModalOpen }) => {
         </div>
       </section>
 
+      <div className="bg-gray-100 h-40 w-1/2 max-md:h-20" />
       {/* second product section */}
-      <section className='h-screen flex items-center relative gap-20'>
-        <div className="bg-gray-100 h-screen w-1/2 absolute z-0 inset-0" />
-        <img src={product_two} className='flex-1 object-contain h-full z-10 pl-20' alt="FlexiClean filterkassett för granulatrening" />
+      <section className='flex items-center relative gap-20 max-md:flex-col'>
+        <div className="bg-gray-100 h-full w-1/2 absolute z-0 inset-0" />
+        <div className='flex-1 flex justify-center z-0 pl-20 max-lg:pl-0'>
+          <img src={product_two} className='object-contain h_450 max-sm:h-80' alt="FlexiClean filterkassett för granulatrening" />
+        </div>
 
-        <div className="flex-1 pl-20 pr-40">
+        <div className="container mx-auto flex-1 pl-20 pr-40 z-10 max-lg:pl-0 max-lg:pr-10 max-md:pr-2 max-md:pl-2">
           <h1 className='text-4xl mb-4'>FlexiClean filterkassett för dagvatten och granulatfiltrering (Fotbollskassetten)</h1>
           <p> <strong>FlexiClean granulatfilter rening av dagvatten samt filtrering av granulat passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor, PAH och Pfas, samt filtrerar partiklar ned till 42 mikrometer. </strong> <br /> <br /> Kassetten flödar 45 l/min filtrerat vatten och filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.
 
@@ -141,11 +146,11 @@ const Products = ({ setOrderModalOpen }) => {
           </div>
         </div>
       </section>
-      <div className="bg-gray-100 h-72 w-1/2" />
+      <div className="bg-gray-100 h-72 w-1/2 max-md:h-20" />
 
       {/* third section */}
-      <section className='my-40 flex justify-center items-center'>
-        <div className='w-96'>
+      <section className='my-20 flex justify-center items-center'>
+        <div className='w_450'>
           <h1 className='text-4xl mb-10'>Västerås Stad</h1>
           <p>Tidigare har Västerås Stad redovisade sina resultat efter tester av FlexiClean graulatfilter. Tillsammans med ett fantastiskt arbete av driftpersonalen på Västerås Stad och FlexiClean granulatfilter kunde man rapportera NOLL utsläpp av granulat i dagvattnet.<br /> <br />”Kalmar-rapporten” Sveriges första vetenskapliga studie av spridningen av mikroplast från en konstgräsplan är publicerad: Den potentiella mikroplastspridningen var 54.9 kg, allt utom 100 gram kunde stoppas med skötselåtgärder och 10,7 gram gummigranulat spreds till dagvattennätet.</p>
           <div className='flex items-center gap-10 mt-10'>
@@ -165,7 +170,7 @@ const Products = ({ setOrderModalOpen }) => {
       <section className='container mx-auto bg-gray-100 flex flex-col px-10 py-20 gap-20 mb-20'>
         <h1 className='text-4xl text-center'>Filterkassettens uppbyggnad</h1>
 
-        <div className="flex gap-10">
+        <div className="flex gap-10 max-md:flex-col">
           <div className="flex-1 flex flex-col gap-4">
             <img src={part3} alt="flexiclean filterpåse med furubark och träflis för filtrering av dagvatten" />
             <strong>Filterpåsen</strong>

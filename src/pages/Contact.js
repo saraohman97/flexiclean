@@ -45,11 +45,11 @@ const Contact = () => {
   }
 
   return (
-    <section className='container mx-auto my-40 px-20'>
-      <h1 className='text-4xl text-center mb-20'>Kontakta oss</h1>
-      <div className='flex gap-20 items-center'>
-        <form onSubmit={handleSubmit} className='w-2/5 min-w-96'>
-        <h2 className='text-2xl'>Skicka ett meddelande</h2>
+    <section className='container mx-auto my-40 px-20 max-md:px-2'>
+      <h1 className='text-4xl text-center max-sm:text-start mb-20 max-md:mb-10'>Kontakta oss</h1>
+      <div className='flex gap-20 items-center max-lg:flex-col'>
+        <form onSubmit={handleSubmit} className='w_450 max-md:w-full'>
+          <h2 className='text-2xl'>Skicka ett meddelande</h2>
           <p className='mb-2'>Vid frågor om dagvatten, företaget och annat</p>
           {error && <p style={{ color: 'red', marginBottom: '1rem' }}>Fälten kan inte vara tomma. </p>}
           {success && <p style={{ color: 'green', marginBottom: '1rem' }}>Ditt meddelande har skickats. </p>}
@@ -103,7 +103,7 @@ const Contact = () => {
         </form>
 
         <div className="flex-1">
-          <div className='flex justify-between gap-6 mb-6 items-end'>
+          <div className='flex justify-between gap-6 mb-6 items-end max-sm:flex-col max-sm:items-start'>
             <div>Öppettider:<div>må–fr: 07.00–16.00 <br />lö: stängt <br />sö: stängt</div></div>
             <div>Kontor: <div>Brandthovdagatan 16 <br /> 721 35 Västerås</div></div>
             <div>
@@ -118,9 +118,16 @@ const Contact = () => {
             <a href="https://www.youtube.com/@FlexiClean" className='text-2xl hover:text-blue-400'><AiFillYoutube /></a>
           </div>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8072.103529496913!2d16.6098096!3d59.6159307!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e60cdcc4c588b%3A0x32db83df4d85a69d!2sAB%20Aros%20R%C3%B6r%20%26%20Svets!5e0!3m2!1ssv!2sse!4v1689242415700!5m2!1ssv!2sse" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title='Adress'></iframe>
+          <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8072.103529496913!2d16.6098096!3d59.6159307!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e60cdcc4c588b%3A0x32db83df4d85a69d!2sAB%20Aros%20R%C3%B6r%20%26%20Svets!5e0!3m2!1ssv!2sse!4v1689242415700!5m2!1ssv!2sse"
+          width='100%'
+          height='450'
+           allowfullscreen="" 
+           loading="lazy" 
+           referrerpolicy="no-referrer-when-downgrade" 
+           title='Adress' />
         </div>
-        </div>
+      </div>
     </section>
   )
 }

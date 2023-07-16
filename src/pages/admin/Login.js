@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     return (
-        <div className="absolute inset-0 flex justify-center items-center w-full h-screen bg-black z-50">
+        <div className="absolute inset-0 flex justify-center items-center w-full h-screen bg-black bg-opacity-30 z-50">
 
             <form onSubmit={handleSubmit} className='bg-white w-96 mx-auto justify-center rounded p-10 flex flex-col gap-4'>
             <Link to='/' className="self-end">X</Link>

@@ -8,10 +8,10 @@ import { Link, Navigate } from 'react-router-dom'
 
 const Projects = () => {
   return (
-    <div className='container mx-auto mt-40 px-20'>
+    <div className='container mx-auto mt-40 px-20 max-md:px-2'>
       {/* first section */}
       <section>
-        <div className="flex justify-between px-10">
+        <div className="flex justify-between px-10 max-md:flex-col max-md:px-0">
           <h1 className='text-4xl'>Minnesvärda projekt</h1>
           <p className='text-gray-400'>Upptäck vårt utbud av kassetter</p>
         </div>
@@ -19,22 +19,22 @@ const Projects = () => {
       </section>
 
       {/* second section */}
-      <section className='text-center w-4/6 mx-auto my-20'>
+      <section className='text-center w-4/6 mx-auto my-20 max-md:w-auto'>
         <h1 className='text-2xl'>Kunden i center</h1>
         <p>Prioriteringar har alltid varit att kunna lösa kundernas problem avseende process- eller dag-vattenfrågor oavsett om FlexiClean är lösningen eller om vi gemensamt med våra samarbetspartners kan lösa problemen. Vi känner att vi är ett litet företag men stora resurser för att lösa de problem just ni har.</p>
       </section>
 
       {/* third section */}
-      <section className=''>
-        <div className="flex items-center">
+      {/* <section> */}
+        <div className="flex items-center max-md:flex-col mb-20">
           <div className="flex-1 h_450"><img src={ovako} className='h-full w-full object-cover' alt="Samlingsbrunn för Ovako Steels dagvattensystem" /></div>
-          <div className="flex-1 pl-10">
+          <div className="flex-1 pl-10 max-md:pl-0">
             <h1 className='text-4xl'>Ovako Steel Hofors</h1>
             <p className='pt-4 pb-2'><strong>Samlingsbrunn för Ovako Steels dagvattensystem</strong></p>
             <p>Brunnen är framtagen tillsammans med Meag. Komplett brunn med stigarrör, beteckning, servicebrygga, förfilter och filterinstallation för 130 000:-.</p>
           </div>
         </div>
-        <div className="flex flex-row-reverse items-center">
+        <div className="flex flex-row-reverse items-center max-md:flex-col">
           <div className="flex-1 h_450"><img src={eskiltuna} className='h-full w-full object-cover' alt="bilhall i Eskilstuna problem med mystiskt oljeutsläpp" /></div>
           <div className="flex-1 pr-10">
             <h1 className='text-4xl'>Bilhall i Eskilstuna</h1>
@@ -42,16 +42,16 @@ const Projects = () => {
             <p>Tillsammans med AB Aros Rör & Svets och Enebo Entreprenad monterades denna vägg för 60 000:- och problemet var löst.</p>
           </div>
         </div>
-      </section>
+      {/* </section> */}
 
       {/* forth section */}
-      <section className='my-40 flex flex-col justify-center text-center items-center'>
+      <section className='my-40 flex flex-col justify-center text-center items-center max-md:my-32'>
         <h1 className='text-4xl mb-10'>Titta på vår Google Maps karta över <br /> våra leveranse.</h1>
         <a href="https://www.google.com/maps/d/edit?mid=1NgcNrP7tE1DlDEef-NoOcD4AiQb0tChd&usp=sharing" rel="noreferrer" target="_blank"><button className='btn btn-gray'>Kolla karta</button></a>
       </section>
 
       {/* fifth section */}
-      <section className='bg-gray-100 p-20 flex gap-20'>
+      <section className='bg-gray-100 p-20 flex gap-20 max-md:flex-col max-md:px-0'>
         <div className="flex-1">
           <img src={project2} className='w-full' alt="flexiClean filterbrunnar för dagvattenrening" />
           <h1 className='text-4xl my-6'>FlexiClean filterbrunnar för dagvattenrening</h1>
@@ -98,7 +98,7 @@ const Projects = () => {
       </section>
 
       {/* sixth section */}
-      <section className='my-40 text-center flex flex-col gap-4'>
+      <section className='my-40 text-center flex flex-col gap-4 max-md:my-32'>
         <h1 className='text-4xl'>Uthyrning</h1>
         <p>Filterbrunnen för dagvattenrening finns för uthyrning via Terana AB. <br /> Kontakta oss för närmare information.</p>
         <div className="flex gap-6 self-center">

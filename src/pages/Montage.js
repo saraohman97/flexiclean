@@ -14,13 +14,13 @@ const Montage = () => {
 
   return (
     <>
-      <section className='container mx-auto px-20 my-32'>
-        <div className="flex justify-between items-center pb-6">
+      <section className='container mx-auto px-20 my-32 max-md:px-2'>
+        <div className="flex justify-between items-center pb-6 max-md:flex-col max-md:items-start">
           <h1 className='text-4xl'>Montage</h1>
           <p className='text-gray-400'>Montering & byte av filterdynor är busenkelt</p>
         </div>
 
-        <div className="flex gap-10">
+        <div className="flex gap-10 max-md:flex-col">
           <div className="flex-1">
             <iframe className='w-full h-full' src={!switchVideo ? 'https://www.youtube.com/embed/HU7RE3Jm3bE?autoplay=1&mute=1' : 'https://www.youtube.com/embed/ZK2RtdIK_e0?autoplay=1&mute=1'} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <h1 className='text-xl mt-1'>{!switchVideo ? 'Installation.wmv' : 'Filterbyte.wmv'}</h1>
@@ -30,7 +30,7 @@ const Montage = () => {
                 <small>FlexiClean</small>
               </a>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 max-md:hidden">
                 <a href="https://www.youtube.com/watch?v=HU7RE3Jm3bE"><button className='btn btn-gray'>Ladda ner</button></a>
                 <a href="https://www.youtube.com/watch?v=HU7RE3Jm3bE"><button className='btn btn-gray'>Dela</button></a>
               </div>

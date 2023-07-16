@@ -43,7 +43,7 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
                             <div className='dropdown py-4' onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
                                 Produkter
                                 <AiOutlineDown />
-                                {showDropdown && menu && (
+                                {showDropdown && (
                                     <div className="dropdown-content w-10 rounded-lg" onClick={() => setShowDropdown(false)}>
                                         <NavLink to='/produkter' className='py-4 px-2 border-b hover:bg-gray-100 hover:border-b-0 rounded-t-lg'>Dagvatten- och granulatfilter</NavLink>
                                         <NavLink to='/projekt' className='py-4 px-2 border-b w-full hover:bg-gray-100 hover:border-0'>Stora projekt</NavLink>
@@ -56,20 +56,24 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
                             <NavLink to='/beställning' className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => setOrderModalOpen(true)}>Beställ</NavLink>
                         </div>
                         {menu && (
-                            <div className='absolute top-0 right-0 bg-white h-screen flex flex-col gap-6 items-end p-4 max-md:w-60'>
-                                <div className='mt-2 mb-10 text-xl' onClick={() => setMenu(false)}><AiOutlineClose /></div>
-                                <NavLink onClick={() => setMenu(false)} to='/produkter'>Produkter</NavLink>
-
-                                <div className="flex flex-col gap-2 items-end" onClick={() => setShowDropdown(false)}>
-                                    <NavLink to='/produkter' onClick={() => setMenu(false)}>Dagvatten- och <br /> granulatfilter</NavLink>
-                                    <NavLink to='/projekt' onClick={() => setMenu(false)}>Stora projekt</NavLink>
-                                    <NavLink to='/montage' onClick={() => setMenu(false)}>Montage</NavLink>
-                                </div>
-
-                                <NavLink to='/dokumentcenter' onClick={() => setMenu(false)}>Documentcenter</NavLink>
-                                <NavLink to='/kontakta-oss' onClick={() => setMenu(false)}>Kontakta oss</NavLink>
-                                <NavLink to='/beställning' className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => menuOrderBtn()}>Beställ</NavLink>
+                            <>
+                            <div onClick={() => setMenu(false)} className='absolute inset-0 h-screen bg-black opacity-80'>
                             </div>
+                                <div className='absolute top-0 right-0 bg-white opacity-100 h-screen flex flex-col gap-6 items-end max-sm:p-4 max-sm:w-60 w-96 py-10 px-16'>
+                                    <div className='mb-10 text-xl' onClick={() => setMenu(false)}><AiOutlineClose /></div>
+                                    <NavLink onClick={() => setMenu(false)} to='/produkter'>Produkter</NavLink>
+
+                                    <div className="flex flex-col gap-2 items-end" onClick={() => setShowDropdown(false)}>
+                                        <NavLink to='/produkter' onClick={() => setMenu(false)}>Dagvatten- och <br /> granulatfilter</NavLink>
+                                        <NavLink to='/projekt' onClick={() => setMenu(false)}>Stora projekt</NavLink>
+                                        <NavLink to='/montage' onClick={() => setMenu(false)}>Montage</NavLink>
+                                    </div>
+
+                                    <NavLink to='/dokumentcenter' onClick={() => setMenu(false)}>Documentcenter</NavLink>
+                                    <NavLink to='/kontakta-oss' onClick={() => setMenu(false)}>Kontakta oss</NavLink>
+                                    <NavLink to='/beställning' className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => menuOrderBtn()}>Beställ</NavLink>
+                                </div>
+                                </>
                         )}
                     </>
                 )}
