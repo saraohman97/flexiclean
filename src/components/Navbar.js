@@ -57,8 +57,7 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
                         </div>
                         {menu && (
                             <>
-                            <div onClick={() => setMenu(false)} className='absolute inset-0 h-screen bg-black opacity-80'>
-                            </div>
+                                <div onClick={() => setMenu(false)} className='absolute inset-0 h-screen bg-black opacity-80' />
                                 <div className='absolute top-0 right-0 bg-white opacity-100 h-screen flex flex-col gap-6 items-end max-sm:p-4 max-sm:w-60 w-96 py-10 px-16'>
                                     <div className='mb-10 text-xl' onClick={() => setMenu(false)}><AiOutlineClose /></div>
                                     <NavLink onClick={() => setMenu(false)} to='/produkter'>Produkter</NavLink>
@@ -73,7 +72,7 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
                                     <NavLink to='/kontakta-oss' onClick={() => setMenu(false)}>Kontakta oss</NavLink>
                                     <NavLink to='/beställning' className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => menuOrderBtn()}>Beställ</NavLink>
                                 </div>
-                                </>
+                            </>
                         )}
                     </>
                 )}

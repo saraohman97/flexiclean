@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import Products from './pages/Products';
@@ -8,13 +9,11 @@ import Montage from './pages/Montage';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { useState } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import PutOrder from './components/PutOrder';
-import Login from './pages/admin/Login';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 import NewPost from './pages/admin/NewPost';
@@ -38,7 +37,7 @@ function App() {
       <Navbar orderModalOpen={orderModalOpen} menuOpen={menuOpen} setOrderModalOpen={setOrderModalOpen} setMenuOpen={setMenuOpen} closeBtn={closeBtn} />
 
       <Routes>
-        <Route path='/' element={ <Home /> } />
+        <Route path='/' element={<Home />} />
         <Route path='/produkter' element={<Products setOrderModalOpen={setOrderModalOpen} />} />
         <Route path='/dokumentcenter' element={<Documents />} />
         <Route path='/projekt' element={<Projects />} />
@@ -46,8 +45,6 @@ function App() {
         <Route path='/kontakta-oss' element={<Contact />} />
 
         <Route path='/beställning' element={<PutOrder setOrderModalOpen={setOrderModalOpen} />} />
-
-        <Route path='/admin' element={<Login />} />
 
         <Route path='/skapa' element={
           <RequireAuth>
