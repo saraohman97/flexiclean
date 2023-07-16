@@ -19,7 +19,7 @@ const Footer = () => {
         <Link to='/produkter' className='hover:text-blue-400'>Produkter</Link>
         <Link to='/kontakta-oss' className='hover:text-blue-400'>Kontakta oss</Link>
         {/* <Link to={currentUser ? '/skapa' : '/admin'} className='hover:text-blue-400'>Admin</Link> */}
-        <button onClick={currentUser ? navigate('/skapa') : () => setLogin(true)}>Login</button>
+        <button onClick={currentUser ? navigate('/skapa') : () => setLogin(true)}>Logga in</button>
       </div>
 
       <small className='text-gray-400'>Copyright © 2015</small>

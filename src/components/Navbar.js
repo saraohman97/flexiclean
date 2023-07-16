@@ -1,5 +1,5 @@
 import logo from '../assets/logotype.png'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AiOutlineDown } from "react-icons/ai";
 import { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
@@ -7,15 +7,11 @@ import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
-const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, closeBtn }) => {
+const Navbar = () => {
     const [menu, setMenu] = useState(false)
     const [showDropdown, setShowDropdown] = useState(true)
     const { currentUser, dispatch } = useContext(AuthContext)
-
-    const menuOrderBtn = () => {
-        setMenu(false)
-        setOrderModalOpen(true)
-    }
+    const navigate = useNavigate()
 
     const logout = () => {
         signOut(auth).then(() => {
@@ -53,7 +49,7 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
                             </div>
                             <NavLink to='/dokumentcenter'>Documentcenter</NavLink>
                             <NavLink to='/kontakta-oss'>Kontakta oss</NavLink>
-                            <NavLink to='/beställning' className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => setOrderModalOpen(true)}>Beställ</NavLink>
+                            <button className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => navigate('/beställ')}>Beställ</button>
                         </div>
                         {menu && (
                             <>
@@ -70,7 +66,7 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
 
                                     <NavLink to='/dokumentcenter' onClick={() => setMenu(false)}>Documentcenter</NavLink>
                                     <NavLink to='/kontakta-oss' onClick={() => setMenu(false)}>Kontakta oss</NavLink>
-                                    <NavLink to='/beställning' className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => menuOrderBtn()}>Beställ</NavLink>
+                                    <button className='w-40 px-4 py-2 border border-blue-400 font-bold text-blue-400 hover:text-white hover:bg-blue-400 rounded-full flex items-center justify-center' onClick={() => navigate('/beställ')}>Beställ</button>
                                 </div>
                             </>
                         )}
