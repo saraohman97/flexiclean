@@ -23,7 +23,7 @@ const PutOrder = ({ setOrder }) => {
         county: '',
         postcode: ''
     })
-  const [yes, setYes] = useState(false)
+    const [yes, setYes] = useState(false)
 
     const FormTitles = ["Välj produkt", "Leverans adress", "Faktura adress", "Bekräfta"]
 
@@ -39,23 +39,24 @@ const PutOrder = ({ setOrder }) => {
         }
     }
 
-    // useEffect(() => {
-    //     yes ? (
-    //         setData(prev => ({
-    //             ...prev, 
-    //             adress: prev.deliveryAdress,
-    //             county: prev.deliveryCounty,
-    //             postcode: prev.deliveryPostcode,
-    //         }))
-    //     ) : (
-    //         setData(prev => ({
-    //             ...prev, 
-    //             adress: '',
-    //             county: '',
-    //             postcode: '',
-    //         }))
-    //     )
-    // }, [yes])
+    //if the billingInfo is the same as deliveryInfo
+    useEffect(() => {
+        yes ? (
+            setData(prev => ({
+                ...prev,
+                adress: prev.deliveryAdress,
+                county: prev.deliveryCounty,
+                postcode: prev.deliveryPostcode,
+            }))
+        ) : (
+            setData(prev => ({
+                ...prev,
+                adress: '',
+                county: '',
+                postcode: '',
+            }))
+        )
+    }, [yes])
 
     return (
         <div className='fixed inset-0 z-50'>
@@ -63,7 +64,7 @@ const PutOrder = ({ setOrder }) => {
 
             <div className='absolute top-0 right-0 bg-white w_450 h-screen p-10 flex flex-col border justify-between border-slate-100'>
                 <div className='self-end text-xl' onClick={() => setOrder(false)}><AiOutlineClose /></div>
-                
+
                 {/* Title */}
                 <div>
                     <h2 className='text-4xl'>Beställning</h2>
