@@ -13,7 +13,7 @@ const PutOrder = ({ setOrder }) => {
         card: ''
     })
 
-    const FormTitles = ["Sign up", "Personal info", "Other"]
+    const FormTitles = ["Beställ", "Personal info", "Other"]
 
     const PageDisplay = () => {
         if (page === 0) {
@@ -29,7 +29,7 @@ const PutOrder = ({ setOrder }) => {
         <div className='fixed inset-0 z-50'>
             <div onClick={() => setOrder(false)} className="fixed inset-0 w-full h-screen bg-black bg-opacity-30" />
 
-            <div className='absolute top-0 right-0 bg-white w-96 h-screen p-10 flex flex-col'>
+            <div className='absolute top-0 right-0 bg-white w_450 h-screen p-10 flex flex-col'>
                 <div className='self-end text-xl' onClick={() => setOrder(false)}><AiOutlineClose /></div>
 
                 <h2 className='text-4xl'>{FormTitles[page]}</h2>
@@ -60,6 +60,7 @@ const PutOrder = ({ setOrder }) => {
                                     adress: '',
                                     card: ''
                                 })
+                                setOrder(false)
                             } else {
                                 setPage((currPage) => currPage + 1)
                             }

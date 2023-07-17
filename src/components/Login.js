@@ -19,6 +19,7 @@ const Login = ({ setLogin }) => {
                 const data = userCredential.user;
                 dispatch({ type: "LOGIN", payload: data })
                 navigate('/skapa')
+                setLogin(false)
             })
             .catch((error) => {
                 setError(true)
@@ -36,7 +37,7 @@ const Login = ({ setLogin }) => {
                 <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email" className="bg-gray-100 p-4 rounded text-center w-full" />
                 <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Lösenord" className="bg-gray-100 p-4 rounded text-center w-full" />
                 {error && <p style={{ color: 'red' }}>Inkorrekt email eller lösenord</p>}
-                <button className='self-center rounded p-3 w-60 mt-6 bg-blue-300 text-white font-bold hover:bg-blue-400'>Logga in</button>
+                <button type='submit' className='self-center rounded p-3 w-60 mt-6 bg-blue-300 text-white font-bold hover:bg-blue-400'>Logga in</button>
             </form>
         </div>
     )

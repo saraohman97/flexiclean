@@ -16,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 import NewPost from './pages/admin/NewPost';
+import PutOrder from './components/PutOrder';
 
 function App() {
   const { currentUser } = useContext(AuthContext)
@@ -29,6 +30,7 @@ function App() {
     <div className='overflow-hidden'>
 
       <Navbar order={order} setOrder={setOrder} />
+      {order && <PutOrder setOrder={setOrder} />}
 
       <Routes>
         <Route path='/' element={<Home />} />
