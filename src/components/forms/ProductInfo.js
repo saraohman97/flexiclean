@@ -1,13 +1,15 @@
 import React from 'react'
 
-const ProductInfo = ({ data, setData }) => {
+const ProductInfo = ({ data, setData, error }) => {
   return (
     <div className='flex flex-col gap-2'>
       <label>Förnamn</label>
       <input type="text" className='border' value={data.firstName} onChange={(e) => setData({ ...data, firstName: e.target.value })} />
+      {error === 'firstName' && <p className='text-sm text-red-500'>Field cannot be empty</p>}
 
       <label>Efternamn</label>
       <input type="text" className='border' value={data.lastName} onChange={(e) => setData({ ...data, lastName: e.target.value })} />
+      {error === 'lastName' && <p className='text-sm text-red-500'>Field cannot be empty</p>}
 
       <label>Email</label>
       <input type="email" className='border' value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} />

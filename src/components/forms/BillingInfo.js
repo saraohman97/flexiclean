@@ -16,14 +16,14 @@ const BillingInfo = ({ data, setData, setOrder, yes, setYes }) => {
       </div>
 
       <label>Faktura adress</label>
-      <input type="text" className='border' value={yes ? data.deliveryAdress : data.adress} onChange={(e) => setData({ ...data, adress: e.target.value })} />
+      <input type="text" className='border' disabled={yes ? true : false} value={yes ? data.deliveryAdress : data.adress} onChange={(e) => setData({ ...data, adress: e.target.value })} />
       <small>Gatuadress, husnummer</small>
 
       <label>Ort</label>
-      <input type="text" className='border' value={yes ? data.deliveryCounty : data.county} onChange={(e) => setData({ ...data, county: e.target.value })} />
+      <input type="text" className='border' disabled={yes ? true : false} value={yes ? data.deliveryCounty : data.county} onChange={(e) => setData({ ...data, county: e.target.value })} />
 
       <label>Postnummer</label>
-      <input type="text" className='border' value={yes ? data.deliveryPostcode : data.postcode} onChange={(e) => setData({ ...data, postcode: e.target.value })} />
+      <input type="text" className='border' disabled={yes ? true : false} value={yes ? data.deliveryPostcode : data.postcode} onChange={(e) => setData({ ...data, postcode: e.target.value })} />
 
       <label>Land</label>
       <input type="text" className='border' value='Sverige' disabled={true} />

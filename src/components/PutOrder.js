@@ -8,7 +8,7 @@ import Overview from './forms/Overview'
 const PutOrder = ({ setOrder }) => {
     const [page, setPage] = useState(0);
     const [data, setData] = useState({
-        fistName: '',
+        firstName: '',
         lastName: '',
         email: '',
         product: '',
@@ -24,12 +24,13 @@ const PutOrder = ({ setOrder }) => {
         postcode: ''
     })
     const [yes, setYes] = useState(false)
+    const [error, setError] = useState('')
 
     const FormTitles = ["Välj produkt", "Leverans adress", "Faktura adress", "Bekräfta"]
 
     const PageDisplay = () => {
         if (page === 0) {
-            return <ProductInfo data={data} setData={setData} />
+            return <ProductInfo data={data} setData={setData} error={error} />
         } else if (page === 1) {
             return <DeliveryInfo data={data} setData={setData} />
         } else if (page === 2) {
@@ -57,6 +58,39 @@ const PutOrder = ({ setOrder }) => {
             }))
         )
     }, [yes])
+
+    const handleSubmit = (e) => {
+        if (page === FormTitles.length - 1) {
+            if (data.firstName === '') {
+                alert('error')
+            } else {
+                setOrder(false)
+                console.log(data)
+            }
+        } else {
+            setPage((currPage) => currPage + 1)
+        }
+    }
+
+    //Validation
+    const steps = () => {
+        if (page === 0) {
+            if (data.firstName === '') {
+                setError('firstName')
+            } else if (data.lastName === '') {
+                setError('lastName')
+            } else {
+                setPage(1)
+                setError('')
+            }
+        } else if (page === 1) {
+            setPage(2)
+        } else if (page === 2) {
+            setPage(3)
+        } else if (page === 3) {
+            handleSubmit()
+        } else return null
+    }
 
     return (
         <div className='fixed inset-0 z-50'>
@@ -87,17 +121,7 @@ const PutOrder = ({ setOrder }) => {
                     >
                         prev
                     </button>
-                    <button
-                        className={`border`}
-                        onClick={() => {
-                            if (page === FormTitles.length - 1) {
-                                console.log(data)
-                                setOrder(false)
-                            } else {
-                                setPage((currPage) => currPage + 1)
-                            }
-                        }}
-                    >
+                    <button onClick={() => steps()}>
                         {page === FormTitles.length - 1 ? 'submit' : 'next'}
                     </button>
                 </div>
