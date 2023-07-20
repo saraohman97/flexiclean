@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const BillingInfo = ({ data, setData, setOrder, yes, setYes }) => {
+const BillingInfo = ({ data, setData, setOrder, yes, setYes, error }) => {
 
   const handleChange = (event) => {
     setYes(event.target.checked);
@@ -18,12 +18,15 @@ const BillingInfo = ({ data, setData, setOrder, yes, setYes }) => {
       <label>Faktura adress</label>
       <input type="text" className='border' disabled={yes ? true : false} value={yes ? data.deliveryAdress : data.adress} onChange={(e) => setData({ ...data, adress: e.target.value })} />
       <small>Gatuadress, husnummer</small>
+      {error === 'adress' && <p className='text-sm text-red-500'>Yta kan inte vara tom</p>}
 
       <label>Ort</label>
       <input type="text" className='border' disabled={yes ? true : false} value={yes ? data.deliveryCounty : data.county} onChange={(e) => setData({ ...data, county: e.target.value })} />
+      {error === 'county' && <p className='text-sm text-red-500'>Yta kan inte vara tom</p>}
 
       <label>Postnummer</label>
-      <input type="text" className='border' disabled={yes ? true : false} value={yes ? data.deliveryPostcode : data.postcode} onChange={(e) => setData({ ...data, postcode: e.target.value })} />
+      <input type="number" className='border' disabled={yes ? true : false} value={yes ? data.deliveryPostcode : data.postcode} onChange={(e) => setData({ ...data, postcode: e.target.value })} />
+      {error === 'postcode' && <p className='text-sm text-red-500'>Yta kan inte vara tom</p>}
 
       <label>Land</label>
       <input type="text" className='border' value='Sverige' disabled={true} />

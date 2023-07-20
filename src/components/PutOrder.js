@@ -12,8 +12,8 @@ const PutOrder = ({ setOrder }) => {
         lastName: '',
         email: '',
         product: '',
-        call: '',
-        number: '',
+        call: false,
+        number: null,
 
         deliveryAdress: '',
         deliveryCounty: '',
@@ -21,7 +21,7 @@ const PutOrder = ({ setOrder }) => {
 
         adress: '',
         county: '',
-        postcode: ''
+        postcode: null
     })
     const [yes, setYes] = useState(false)
     const [error, setError] = useState('')
@@ -32,9 +32,9 @@ const PutOrder = ({ setOrder }) => {
         if (page === 0) {
             return <ProductInfo data={data} setData={setData} error={error} />
         } else if (page === 1) {
-            return <DeliveryInfo data={data} setData={setData} />
+            return <DeliveryInfo data={data} setData={setData} error={error} />
         } else if (page === 2) {
-            return <BillingInfo data={data} setData={setData} setOrder={setOrder} yes={yes} setYes={setYes} />
+            return <BillingInfo data={data} setData={setData} setOrder={setOrder} yes={yes} setYes={setYes} error={error} />
         } else {
             return <Overview data={data} setData={setData} yes={yes} />
         }
@@ -79,16 +79,42 @@ const PutOrder = ({ setOrder }) => {
                 setError('firstName')
             } else if (data.lastName === '') {
                 setError('lastName')
+            } else if (data.email === '') {
+                setError('email')
+            } else if (data.product === '') {
+                setError('product')
             } else {
                 setPage(1)
                 setError('')
             }
+
         } else if (page === 1) {
-            setPage(2)
+            if(data.deliveryAdress === '') {
+                setError('deliveryAdress')
+            } else if (data.deliveryCounty === '') {
+                setError('deliveryCounty')
+            } else if (data.deliveryPostcode === '') {
+                setError('deliveryPostcode')
+            } else {
+                setPage(2)
+                setError('')
+            }
+
         } else if (page === 2) {
-            setPage(3)
+            if(data.adress === '') {
+                setError('adress')
+            } else if (data.county === '') {
+                setError('county')
+            } else if (data.postcode === '') {
+                setError('postcode')
+            } else {
+                setPage(3)
+                setError('')
+            }
+
         } else if (page === 3) {
             handleSubmit()
+
         } else return null
     }
 
@@ -96,7 +122,7 @@ const PutOrder = ({ setOrder }) => {
         <div className='fixed inset-0 z-50'>
             <div onClick={() => setOrder(false)} className="fixed inset-0 w-full h-screen bg-black bg-opacity-30" />
 
-            <div className='absolute top-0 right-0 bg-white w_450 h-screen p-10 flex flex-col border justify-between border-slate-100'>
+            <div className='absolute top-0 right-0 bg-white w-96 max-sm:w-full overflow-y-scroll h-screen p-10 flex flex-col border justify-between border-slate-100'>
                 <div className='self-end text-xl' onClick={() => setOrder(false)}><AiOutlineClose /></div>
 
                 {/* Title */}
@@ -121,7 +147,7 @@ const PutOrder = ({ setOrder }) => {
                     >
                         prev
                     </button>
-                    <button onClick={() => steps()}>
+                    <button className='border' onClick={() => steps()}>
                         {page === FormTitles.length - 1 ? 'submit' : 'next'}
                     </button>
                 </div>

@@ -138,12 +138,24 @@ const NewPost = () => {
                     />
                 </div>
 
+                <div className='flex flex-col'>
+                    <label>File</label>
                 <input
                     accept="image/png,image/jpeg"
                     onChange={(e) => setFile(e.target.files[0])}
                     type="file"
-                    className=''
                 />
+                </div>
+
+                {/* <div>
+                    <label>Image</label>
+                    <input
+                    accept="image/png,image/jpeg"
+                    onChange={(e) => setImage(e.target.files[1])}
+                    type="file"
+                />
+                </div> */}
+
 
                 {error && <span className='text-red-500 mt-4'>Post must contain a title and text.</span>}
                 <button

@@ -59,7 +59,7 @@ const Navbar = ({ setOrder }) => {
                             <>
                                 <div onClick={() => setMenu(false)} className='absolute inset-0 h-screen bg-black opacity-80' />
 
-                                <div className='absolute top-0 right-0 bg-white opacity-100 h-screen flex flex-col gap-6 items-end max-sm:p-4 max-sm:w-60 w-96 py-10 px-16'>
+                                <div className='absolute top-0 right-0 bg-white opacity-100 h-screen flex flex-col gap-6 items-end max-sm:p-4 max-sm:w-60 w-72 py-10 px-16'>
                                     <div className='mb-10 text-xl' onClick={() => setMenu(false)}><AiOutlineClose /></div>
                                     <NavLink onClick={() => setMenu(false)} to='/produkter'>Produkter</NavLink>
 

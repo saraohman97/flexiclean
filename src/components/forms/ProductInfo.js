@@ -5,14 +5,15 @@ const ProductInfo = ({ data, setData, error }) => {
     <div className='flex flex-col gap-2'>
       <label>Förnamn</label>
       <input type="text" className='border' value={data.firstName} onChange={(e) => setData({ ...data, firstName: e.target.value })} />
-      {error === 'firstName' && <p className='text-sm text-red-500'>Field cannot be empty</p>}
+      {error === 'firstName' && <p className='text-sm text-red-500'>Yta kan inte vara tom</p>}
 
       <label>Efternamn</label>
       <input type="text" className='border' value={data.lastName} onChange={(e) => setData({ ...data, lastName: e.target.value })} />
-      {error === 'lastName' && <p className='text-sm text-red-500'>Field cannot be empty</p>}
+      {error === 'lastName' && <p className='text-sm text-red-500'>Yta kan inte vara tom</p>}
 
       <label>Email</label>
       <input type="email" className='border' value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} />
+      {error === 'email' && <p className='text-sm text-red-500'>Yta kan inte vara tom</p>}
 
       <label>Product</label>
       <select
@@ -28,6 +29,7 @@ const ProductInfo = ({ data, setData, error }) => {
         <option value="filter1">Filter1</option>
         <option value="filter2">Filter2</option>
       </select>
+      {error === 'product' && <p className='text-sm text-red-500'>Yta kan inte vara tom</p>}
 
       <label>Vill du bli uppringd?</label>
       <div className='flex gap-2'>
@@ -38,7 +40,7 @@ const ProductInfo = ({ data, setData, error }) => {
       {data.call && (
         <>
           <label>Nummer</label>
-          <input type="email" className='border' value={data.number} onChange={(e) => setData({ ...data, number: e.target.value })} />
+          <input type="number" className='border' value={data.number} onChange={(e) => setData({ ...data, number: e.target.value })} />
         </>
       )}
     </div>
